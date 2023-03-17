@@ -12,6 +12,6 @@
     "yaml-js": "^0.3.1"
   },
   "scripts": {
-    "build": "npx resume-cli export -r resume.yaml -t stackoverflow -f html public/resume.html"
+    "build": "npx resume-cli export -r resume.yaml -t stackoverflow -f html public/index.html"
   }
 }
