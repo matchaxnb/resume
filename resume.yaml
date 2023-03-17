@@ -19,6 +19,7 @@ basics:
   profiles:
     - network: "LinkedIn" # network name
       url: "https://www.linkedin.com/in/matcha-d/" # url to candidate's profile on the network
+      username: matcha-d
     - network: Twitter
       username: "matcha_x" # user handle of the candidate on the network
     - network: GitHub
@@ -44,22 +45,22 @@ skills:
     level: advanced
     keywords: [ Kanban, Scrum ]
   - name: Software Architecture
-    level: expert
+    level: master
     keywords: [ Distributed systems, Scalable systems ]
   - name: Developer Experience
-    level: expert
+    level: master
     keywords: [ Forming communities, Backstage, Developer-centric infrastructure, Bridging knowledge gaps ]
   - name: Free/OSS and Engineering culture 
-    level: expert
+    level: master
     keywords: [ Communities of Practice, Inner Source, Meetups, Talks ]
   - name: Software engineering and development
-    level: expert
+    level: master
     keywords: [ Python, Golang, NodeJS, PHP, Bash and POSIX shell, problem solving ]
   - name: Relational database systems
     level: advanced
     keywords: [ PostgreSQL, MariaDB, MySQL ]
   - name: Enterprise server environments
-    level: expert
+    level: master
     keywords: [ GNU/Linux, Debian, Alpine ]
   - name: AWS Cloud architecture
     level: advanced
@@ -67,13 +68,13 @@ skills:
     level: advanced
     keywords: [ AWS, Scaleway ]
   - name: DevOps tooling and processes
-    level: expert
+    level: master
     keywords: [ Git, GitLab, GitHub, Ansible, Terraform, Infrastructure as Code, Engineering Assets Management ]
   - name: Virtualization
-    level: full-proficiency
+    level: advanced
     keywords: [ VMWare ESXi and vSphere, Hyper-V, Proxmox, KVM, bhyve ]
   - name: Containers and Orchestration
-    level: expert
+    level: master
     keywords: [ Kubernetes operations, Docker, Packer, security scanners ]
 
 
@@ -129,6 +130,7 @@ work:
     startDate: "2015-01-01"
     endDate: "2017-01-01"
   - name: Atasta SAS
+    position: Software Engineer
     summary: >
       I am in charge of the infrastructure aspects of this small company, and also team with the other employees in tasks of software development and deployment. I also assess skills and interview candidates. I do a number of technical meetings, audit sessions, consulting with clients, and help the company shape its general technical direction
     startDate: "2012-01-01"
@@ -146,6 +148,7 @@ work:
       I work as a system administrator in web hosting and network support, handling tickets and managing relations with customers.
     startDate: "2009-01-01"
     endDate: "2009-07-01"
+    position: System Administrator
     keywords: [ customer management, system administration, linux ]
 
 # The 'education' section describes the candidate's formal education, including college and university, continuing education, and standalone programs and courses.
@@ -153,19 +156,19 @@ education:
   - studyType: STEM training
     institution: "Self-training"
   - studyType: "AWS Solutions Architect – Associate"
-    date: 2016
+    endDate: "2016"
   - studyType: "Advanced PostgreSQL DBA"
-    date: 2014
+    endDate: "2014"
     institution: "Dalibo"
   - studyType: DUT Informatique
-    date: 2008
+    endDate: "2008"
     institution: "IUT de Lens, France"
     courses:
       - Software development
       - System administration
       - Project management
   - studyType: Baccalauréat scientifique
-    date: 2006
+    endDate: "2006"
     institution: "Lycée Édouard Branly, Boulogne sur Mer, France"
     courses:
       - maths
