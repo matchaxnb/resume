@@ -1,767 +1,1585 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Matcha (Chloé) Desoutter</title>
-    <meta name="description" content="I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&amp;amp;D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I&#x27;m obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
-">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
-    <style>:root {
-  /* Colors */
-  --primaryColor: #212529;
-  --secondaryColor: #95a5a6;
-  --accentColor: #f1c40f;
-  --linkColor: #2ecc71;
-  --mutedColor: #f4f6f6;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Matcha (Chloé) Desoutter</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
 
-  /* Typography */
-  --ratio: 1.25;
-  --scale0: 1rem;
-  --scale1: calc(var(--scale0) * var(--ratio));
-  --scale2: calc(var(--scale1) * var(--ratio));
-  --scale3: calc(var(--scale2) * var(--ratio));
-  --scale4: calc(var(--scale3) * var(--ratio));
-  --scale5: calc(var(--scale4) * var(--ratio));
-}
-
-* {
-  box-sizing: border-box;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-html {
-  font-size: 14px;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-  color: var(--primaryColor);
-  display: grid;
-  font: 1em/1.5 Lato, sans-serif;
-  gap: 2em;
-  grid-template-columns:
-    [full-start]
-    1fr
-    [main-start side-start]
-    minmax(min-content, 12em)
-    [side-end content-start]
-    minmax(min-content, 36em)
-    [main-end content-end]
-    1fr
-    [full-end];
-  grid-template-rows: auto [content] 0;
-  margin-bottom: 4em;
-}
-
-body::before {
-  content: '';
-  grid-column: full;
-  grid-row: content;
+  line-height: 1;
 }
 
 ol,
 ul {
-  padding-left: 1em;
+  list-style: none;
 }
 
-li + li {
-  margin-top: 0.2em;
+blockquote,
+q {
+  quotes: none;
 }
 
-li::marker {
-  color: var(--mutedColor);
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+p {
+  display: block;
 }
 
 a {
-  color: var(--linkColor);
+  color: #0095ff;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
-a:focus,
 a:hover {
-  color: var(--accentColor);
+  color: #0c65a5;
+  text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
-h5 {
-  font-weight: normal;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
 }
 
 h1 {
-  font-size: var(--scale5);
+  font-size: 2rem;
 }
 
 h2 {
-  color: var(--secondaryColor);
-  font-size: var(--scale4);
+  font-size: 1.67rem;
 }
 
 h3 {
-  color: var(--accentColor);
-  font-size: var(--scale3);
-  grid-column: side;
-  margin-bottom: 1rem;
+  font-size: 1.27rem;
 }
 
-h4 {
-  font-size: var(--scale2);
-}
-
-h5 {
-  font-size: var(--scale1);
-}
-
-h6 {
-  font-size: var(--scale0);
+em {
+  color: #757575;
 }
 
 blockquote {
-  border-left: 0.2em solid var(--mutedColor);
-  padding-left: 1em;
+  margin-bottom: 1em;
 }
 
-cite {
-  color: var(--secondaryColor);
-  font-style: inherit;
+strong {
+  font-weight: 700;
 }
 
-cite::before {
-  content: '— ';
+/* main container */
+
+#resume {
+  padding: 1.5rem;
 }
 
-.masthead {
-  background: var(--mutedColor);
-  display: inherit;
-  gap: inherit;
-  grid-column: full;
-  grid-template-columns: inherit;
-  padding: 4em 0;
-  row-gap: 0;
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
 }
 
-.masthead > *,
-section {
-  grid-column: main;
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
 }
 
-article > * + *,
-blockquote > * + * {
-  margin-top: 0.6em;
+#contact {
+  margin-top: 0.5rem;
 }
 
-.stack {
-  display: grid;
-  gap: 1.5em;
-}
-
-.grid-list {
-  display: grid;
-  gap: 1em;
-}
-
-.spaced-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.spaced-list:first-child::before {
-  border-bottom: 1px solid var(--mutedColor);
-  content: '';
-  flex-grow: 1;
-  margin: 0 1em;
-  order: 1;
-}
-
-.spaced-list > :nth-child(2) {
-  order: 2;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+#profiles .item {
   padding: 0;
 }
 
-.tag-list > li {
-  background: var(--mutedColor);
-  margin: 0 0.2em 0.2em 0;
-  padding: 0.2em 0.6em;
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
-@media print, (min-width: 48em) {
-  h3 {
-    text-align: right;
-    margin-bottom: inherit;
-  }
+#header > div {
+  line-height: 1.5;
+}
 
-  .masthead > *,
-  section {
-    grid-column: content;
-  }
+#header > div > div {
+  margin-right: 1.2em;
+}
 
-  section {
-    display: contents;
-  }
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
 
-  .grid-list {
-    grid-template-columns: 1fr 1fr;
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #eb5f51;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.section > section > section {
+  margin-bottom: 0.5rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
   }
 }
-</style>
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 1em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  ul.keywords::before {
+    content: "Skills acquired: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
   </head>
   <body>
-      <header class="masthead">
-          <h1>Matcha (Chloé) Desoutter</h1>
-          <h2>Staff Software Engineer</h2>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Matcha (Chloé) Desoutter</h1>
+    			<h2 class="label">Staff Software Engineer</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="city">Paris,</span>
+    			<span class="countryCode">FR</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="far fa-envelope"></span>
+    				<a class="hide-href-print" href="mailto:ds.tt.rc@gmail.com">ds.tt.rc@gmail.com</a>
+    			</div>
+    			<div class="phone">
+    				<span class="fas fa-mobile-alt"></span>
+    				<a class="hide-href-print" href="tel:+33659906332">+33659906332</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/matcha-d/"></a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-twitter twitter social"></span>
+    					<span>matcha_x</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/matchaxnb">matchaxnb</a>
+    					</span>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section">
+    		<section class="main-summary">
+    			<div><p>I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.</p></div>
+    		</section>
+    	</section>
+    
+    <section class="section">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Navigating challenges
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Developer Experience</li>
+    				<li>Open Source</li>
+    				<li>Distributed architecture</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Acting on critical engineering domains
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Large databases</li>
+    				<li>Platform Abstraction</li>
+    				<li>Cross-domain communication</li>
+    				<li>Time-constrained processing</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Acting on critical people challenges in Engineering
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Forming communities</li>
+    				<li>scaling up engineering into communities</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Engineering Processes
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Kanban</li>
+    				<li>Scrum</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Software Architecture
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Distributed systems</li>
+    				<li>Scalable systems</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Developer Experience
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Forming communities</li>
+    				<li>Backstage</li>
+    				<li>Developer-centric infrastructure</li>
+    				<li>Bridging knowledge gaps</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Free/OSS and Engineering culture
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Communities of Practice</li>
+    				<li>Inner Source</li>
+    				<li>Meetups</li>
+    				<li>Talks</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Software engineering and development
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Python</li>
+    				<li>Golang</li>
+    				<li>NodeJS</li>
+    				<li>PHP</li>
+    				<li>Bash and POSIX shell</li>
+    				<li>problem solving</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Relational database systems
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>PostgreSQL</li>
+    				<li>MariaDB</li>
+    				<li>MySQL</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Enterprise server environments
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>GNU/Linux</li>
+    				<li>Debian</li>
+    				<li>Alpine</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				AWS Cloud architecture
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Cloud environments
+    			</h3>
+    			 
+    			<div class="level advanced">
+    				<em>advanced</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>AWS</li>
+    				<li>Scaleway</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				DevOps tooling and processes
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Git</li>
+    				<li>GitLab</li>
+    				<li>GitHub</li>
+    				<li>Ansible</li>
+    				<li>Terraform</li>
+    				<li>Infrastructure as Code</li>
+    				<li>Engineering Assets Management</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Virtualization
+    			</h3>
+    			 
+    			<div class="level full-proficiency">
+    				<em>full-proficiency</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>VMWare ESXi and vSphere</li>
+    				<li>Hyper-V</li>
+    				<li>Proxmox</li>
+    				<li>KVM</li>
+    				<li>bhyve</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Containers and Orchestration
+    			</h3>
+    			 
+    			<div class="level expert">
+    				<em>expert</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Kubernetes operations</li>
+    				<li>Docker</li>
+    				<li>Packer</li>
+    				<li>security scanners</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
       </header>
-      <section id="contact">
-        <h3>Contact</h3>
-        <div class="grid-list">
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:ds.tt.rc@gmail.com">ds.tt.rc@gmail.com</a>
+    
+      <section id="work">
+        <section class="work-item">
+    
+          <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">May 2021</span>
+              <span class="endDate">- Current</span>
             </div>
-            <div>
-              <h4>Phone</h4>
-              +33659906332
-            </div>
-            <div>
-              <h4>Website</h4>
-              <a href="https://matchaxnb.github.io">matchaxnb.github.io</a>
-            </div>
-        </div>
-      </section>
-        <section id="about">
-          <h3>About</h3>
-          <article>
-            <p>I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&amp;D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.</p>
-      
-          </article>
-        </section>
-        <section id="profiles">
-          <h3>Profiles</h3>
-          <div class="grid-list">
-              <div>
-                  <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/matcha-d/">https://www.linkedin.com/in/matcha-d/</a>
-              </div>
-              <div>
-                  <h4>Twitter</h4>
-                    matcha_x
-              </div>
-              <div>
-                  <h4>GitHub</h4>
-                    <a href="https://github.com/matchaxnb">matchaxnb</a>
-              </div>
+            <div class="position">Staff Software Engineer, Platform</div>
+            <div class="company">sennder GmbH</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>devops</li>
+            <li>architecture</li>
+            <li>technical leadership</li>
+            <li>developer experience</li>
+            <li>open source</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>As a Staff Software Engineer in the Platform BA, I take part in building sennder's internal platform that helps developers deploy numerous services as the company switches from a monolithic app model to a distributed asynchronous architecture. I also initiate the Developer Experience initiative and set the company on a path towards friction-less knowledge sharing across an Engineering community of 200+ people. When I am not doing this, I interview a large number of engineers so that more talented people join forces with us</p></div>
+            <ul class="highlights">
+              <li><p>built tooling to migrate infrastructure to and from AWS ECS to EKS and for cross-account RDS migrations</p></li>
+              <li><p>co-built and led the DevOps and Infrastructure Community of Practice</p></li>
+              <li><p>spearheaded the Developer Experience initiative for 200 engineers, inspiring other lead engineers to do the same with QA and frontend tools</p></li>
+            </ul>
           </div>
         </section>
-
-      <section id="work">
-        <h3>Work</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>sennder GmbH</h4>
-                  <span>
-                    <time datetime="2021-05-01">May 2021</time> –
-                    Present
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Staff Software Engineer, Platform</strong>
-                    <a href="https://sennder.com">sennder.com</a>
-                </div>
-              </header>
-                <p>As a Staff Software Engineer in the Platform BA, I take part in building sennder's internal platform that helps developers deploy numerous services as the company switches from a monolithic app model to a distributed asynchronous architecture. I also initiate the Developer Experience initiative and set the company on a path towards friction-less knowledge sharing across an Engineering community of 200+ people. When I am not doing this, I interview a large number of engineers so that more talented people join forces with us</p>
+        <section class="work-item">
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>devops</li>
-                    <li>architecture</li>
-                    <li>technical leadership</li>
-                    <li>developer experience</li>
-                    <li>open source</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>bluenove</h4>
-                  <span>
-                    <time datetime="2019-04-01">Apr 2019</time> –
-                    <time datetime="2021-05-01">May 2021</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Senior DevOps Engineer</strong>
-                    <a href="https://bluenove.com">bluenove.com</a>
-                </div>
-              </header>
-                <p>DevOps-wise, I build the tools that deploy stacks of open source collective intelligence solutions and as co-Tech Lead I help developers study technical problems and produce elegant and efficient algorithmic and architectural solutions to these.</p>
+          <label for="work-item-1"></label>
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>devops</li>
-                    <li>architecture</li>
-                    <li>technical leadership</li>
-                    <li>system administration</li>
-                    <li>network administration</li>
-                    <li>relational databases</li>
-                    <li>development</li>
-                    <li>security</li>
-                    <li>containers</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Believe Digital</h4>
-                  <span>
-                    <time datetime="Sun Jan 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">Jan 2017</time> –
-                    <time datetime="Mon Apr 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">Apr 2019</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Senior DevOps Engineer and System Administrator</strong>
-                    <a href="https://www.believe.com/">www.believe.com</a>
-                </div>
-              </header>
-                <p>As an experienced DevOps/sysadmin leading (tech-wise) a team of 4, we build together a better, more modern infrastructure for petabyte-scale data management and processing. We face numerous technical and security challenges to deliver the best, most reliable service to our team of 50 developers and their ever-growing number of customers.</p>
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Apr 2019</span>
+              <span class="endDate">- May 2021</span>
+            </div>
+            <div class="position">Senior DevOps Engineer</div>
+            <div class="company">bluenove</div>
+          </header>
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>devops</li>
-                    <li>security</li>
-                    <li>storage</li>
-                    <li>system administration</li>
-                    <li>linux</li>
-                    <li>network administration</li>
-                    <li>containers</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>NBS System</h4>
-                  <span>
-                    <time datetime="2015-01-01">Jan 2015</time> –
-                    <time datetime="2017-01-01">Jan 2017</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>R&amp;D Engineer</strong>
-                    <a href="https://www.nbs-system.com/">www.nbs-system.com</a>
-                </div>
-              </header>
-                <p>I work in the 3-person R&amp;D team as a backend python developer, solving problems pertaining to scaling an Information System, general performance, reliability. I also perform consulting missions for clients who need special expertise on relational databases.</p>
+     
+          <ul class="keywords">
+            <li>devops</li>
+            <li>architecture</li>
+            <li>technical leadership</li>
+            <li>system administration</li>
+            <li>network administration</li>
+            <li>relational databases</li>
+            <li>development</li>
+            <li>security</li>
+            <li>containers</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>DevOps-wise, I build the tools that deploy stacks of open source collective intelligence solutions and as co-Tech Lead I help developers study technical problems and produce elegant and efficient algorithmic and architectural solutions to these.</p></div>
+            <ul class="highlights">
+              <li><p>cut down deployment time for the solutions from 1 week with large inefficient infrastructure to 2 hours (on dedicated servers)</p></li>
+              <li><p>cut down hosting costs massively</p></li>
+              <li><p>accelerated development through code base cleanups</p></li>
+              <li><p>led and inspired developers</p></li>
+              <li><p>tackled performance problems through live troubleshooting and optimizations, addressing crisis situations</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>devops</li>
-                    <li>system administration</li>
-                    <li>linux</li>
-                    <li>relational databases</li>
-                    <li>development</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Atasta SAS</h4>
-                  <span>
-                    <time datetime="2012-01-01">Jan 2012</time> –
-                    <time datetime="2015-01-01">Jan 2015</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>I am in charge of the infrastructure aspects of this small company, and also team with the other employees in tasks of software development and deployment. I also assess skills and interview candidates. I do a number of technical meetings, audit sessions, consulting with clients, and help the company shape its general technical direction</p>
+          <label for="work-item-2"></label>
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>devops</li>
-                    <li>sysadmin</li>
-                    <li>development</li>
-                    <li>linux</li>
-                    <li>relational databases</li>
-                    <li>auditing</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Freelancer</h4>
-                  <span>
-                    <time datetime="Fri Jan 01 2010 00:00:00 GMT+0000 (Coordinated Universal Time)">Jan 2010</time> –
-                    <time datetime="Tue Jan 01 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">Jan 2019</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                    <strong>Technical Consultant</strong>
-                </div>
-              </header>
-                <p>I provide small and medium businesses with consulting on their database and web stacks, help them with online shop migrations and general IT operations, system architecture reviews and more services.</p>
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2017</span>
+              <span class="endDate">- Apr 2019</span>
+            </div>
+            <div class="position">Senior DevOps Engineer and System Administrator</div>
+            <div class="company">Believe Digital</div>
+          </header>
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>devops</li>
-                    <li>system administration</li>
-                    <li>ecommerce</li>
-                    <li>relational databases</li>
-                    <li>development</li>
-                    <li>security</li>
-                    <li>containers</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Nerim SAS</h4>
-                  <span>
-                    <time datetime="2009-01-01">Jan 2009</time> –
-                    <time datetime="2009-07-01">Jul 2009</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>I work as a system administrator in web hosting and network support, handling tickets and managing relations with customers.</p>
+     
+          <ul class="keywords">
+            <li>devops</li>
+            <li>security</li>
+            <li>storage</li>
+            <li>system administration</li>
+            <li>linux</li>
+            <li>network administration</li>
+            <li>containers</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>As an experienced DevOps/sysadmin leading (tech-wise) a team of 4, we build together a better, more modern infrastructure for petabyte-scale data management and processing. We face numerous technical and security challenges to deliver the best, most reliable service to our team of 50 developers and their ever-growing number of customers.</p></div>
+            <ul class="highlights">
+              <li><p>successfully tackled complex database migrations touching realtime workflows</p></li>
+              <li><p>cleaned up build processes</p></li>
+              <li><p>successfully migrated server environments from custom Gentoo distributions to standard Debian systems</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
     
-                <h5>Highlights</h5>
-                <ul>
-                    <li>customer management</li>
-                    <li>system administration</li>
-                    <li>linux</li>
-                </ul>
-            </article>
-        </div>
+          <label for="work-item-3"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2015</span>
+              <span class="endDate">- Jan 2017</span>
+            </div>
+            <div class="position">R&amp;D Engineer</div>
+            <div class="company">NBS System</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>devops</li>
+            <li>system administration</li>
+            <li>linux</li>
+            <li>relational databases</li>
+            <li>development</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>I work in the 3-person R&D team as a backend python developer, solving problems pertaining to scaling an Information System, general performance, reliability. I also perform consulting missions for clients who need special expertise on relational databases.</p></div>
+            <ul class="highlights">
+              <li><p>unblocked massively slow information system accesses by building a smart middleware</p></li>
+              <li><p>integrated new deployment platforms in addition to Xen and KVM (VMware vSphere)</p></li>
+              <li><p>fixed performance issues on large Magento deployments during the seasonal sales</p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-4"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2012</span>
+              <span class="endDate">- Jan 2015</span>
+            </div>
+            <div class="company">Atasta SAS</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>devops</li>
+            <li>sysadmin</li>
+            <li>development</li>
+            <li>linux</li>
+            <li>relational databases</li>
+            <li>auditing</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>I am in charge of the infrastructure aspects of this small company, and also team with the other employees in tasks of software development and deployment. I also assess skills and interview candidates. I do a number of technical meetings, audit sessions, consulting with clients, and help the company shape its general technical direction</p></div>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-5"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2010</span>
+              <span class="endDate">- Jan 2019</span>
+            </div>
+            <div class="position">Technical Consultant</div>
+            <div class="company">Freelancer</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>devops</li>
+            <li>system administration</li>
+            <li>ecommerce</li>
+            <li>relational databases</li>
+            <li>development</li>
+            <li>security</li>
+            <li>containers</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>I provide small and medium businesses with consulting on their database and web stacks, help them with online shop migrations and general IT operations, system architecture reviews and more services.</p></div>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-6"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2009</span>
+              <span class="endDate">- Jul 2009</span>
+            </div>
+            <div class="company">Nerim SAS</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>customer management</li>
+            <li>system administration</li>
+            <li>linux</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p>I work as a system administrator in web hosting and network support, handling tickets and managing relations with customers.</p></div>
+          </div>
+        </section>
       </section>
-      <section id="education">
-        <h3>Education</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Self-training</h4>
-                  <span>
-                    <time datetime="">Invalid Date</time> –
-                    Present
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>STEM training</p>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4></h4>
-                  <span>
-                    <time datetime="">Invalid Date</time> –
-                    Present
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>AWS Solutions Architect – Associate</p>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Dalibo</h4>
-                  <span>
-                    <time datetime="">Invalid Date</time> –
-                    Present
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>Advanced PostgreSQL DBA</p>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>IUT de Lens, France</h4>
-                  <span>
-                    <time datetime="">Invalid Date</time> –
-                    Present
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>DUT Informatique</p>
-                <h5>Courses</h5>
-                <ul>
-                    <li>Software development</li>
-                    <li>System administration</li>
-                    <li>Project management</li>
-                </ul>
-            </article>
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Lycée Édouard Branly, Boulogne sur Mer, France</h4>
-                  <span>
-                    <time datetime="">Invalid Date</time> –
-                    Present
-                  </span>
-                </div>
-                <div class="spaced-list">
-                </div>
-              </header>
-                <p>Baccalauréat scientifique</p>
-                <h5>Courses</h5>
-                <ul>
-                    <li>maths</li>
-                    <li>physics</li>
-                    <li>mechanics</li>
-                    <li>electronics</li>
-                    <li>philosophy</li>
-                </ul>
-            </article>
-        </div>
-      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Projects <span class="item-count">(1)</span></h2>
+      </header>
       <section id="projects">
-        <h3>Projects</h3>
-        <div class="stack">
-            <article>
-              <header>
-                <div class="spaced-list">
-                  <h4>Speaker at CodePub Berlin meets Sennder</h4>
-                  <span>
-                    <time datetime="Mon Nov 29 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">Nov 2021</time> –
-                    <time datetime="Mon Nov 29 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">Nov 2021</time>
-                  </span>
-                </div>
-                <div class="spaced-list">
-                  <span>
-                  </span>
-                </div>
-              </header>
-            </article>
-        </div>
-      </section>
-      <section id="skills">
-        <h3>Skills</h3>
-        <div class="grid-list">
-            <div>
-                <h4>Navigating challenges</h4>
-                <ul class="tag-list">
-                    <li>Developer Experience</li>
-                    <li>Open Source</li>
-                    <li>Distributed architecture</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Acting on critical engineering domains</h4>
-                <ul class="tag-list">
-                    <li>Large databases</li>
-                    <li>Platform Abstraction</li>
-                    <li>Cross-domain communication</li>
-                    <li>Time-constrained processing</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Acting on critical people challenges in Engineering</h4>
-                <ul class="tag-list">
-                    <li>Forming communities</li>
-                    <li>scaling up engineering into communities</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Engineering Processes</h4>
-                <ul class="tag-list">
-                    <li>Kanban</li>
-                    <li>Scrum</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Software Architecture</h4>
-                <ul class="tag-list">
-                    <li>Distributed systems</li>
-                    <li>Scalable systems</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Developer Experience</h4>
-                <ul class="tag-list">
-                    <li>Forming communities</li>
-                    <li>Backstage</li>
-                    <li>Developer-centric infrastructure</li>
-                    <li>Bridging knowledge gaps</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Free/OSS and Engineering culture</h4>
-                <ul class="tag-list">
-                    <li>Communities of Practice</li>
-                    <li>Inner Source</li>
-                    <li>Meetups</li>
-                    <li>Talks</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Software engineering and development</h4>
-                <ul class="tag-list">
-                    <li>Python</li>
-                    <li>Golang</li>
-                    <li>NodeJS</li>
-                    <li>PHP</li>
-                    <li>Bash and POSIX shell</li>
-                    <li>problem solving</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Relational database systems</h4>
-                <ul class="tag-list">
-                    <li>PostgreSQL</li>
-                    <li>MariaDB</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Enterprise server environments</h4>
-                <ul class="tag-list">
-                    <li>GNU/Linux</li>
-                    <li>Debian</li>
-                    <li>Alpine</li>
-                </ul>
-            </div>
-            <div>
-                <h4>AWS Cloud architecture</h4>
-            </div>
-            <div>
-                <h4>Cloud environments</h4>
-                <ul class="tag-list">
-                    <li>AWS</li>
-                    <li>Scaleway</li>
-                </ul>
-            </div>
-            <div>
-                <h4>DevOps tooling and processes</h4>
-                <ul class="tag-list">
-                    <li>Git</li>
-                    <li>GitLab</li>
-                    <li>GitHub</li>
-                    <li>Ansible</li>
-                    <li>Terraform</li>
-                    <li>Infrastructure as Code</li>
-                    <li>Engineering Assets Management</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Virtualization</h4>
-                <ul class="tag-list">
-                    <li>VMWare ESXi and vSphere</li>
-                    <li>Hyper-V</li>
-                    <li>Proxmox</li>
-                    <li>KVM</li>
-                    <li>bhyve</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Containers and Orchestration</h4>
-                <ul class="tag-list">
-                    <li>Kubernetes operations</li>
-                    <li>Docker</li>
-                    <li>Packer</li>
-                    <li>security scanners</li>
-                </ul>
-            </div>
-        </div>
-      </section>
-      <section id="languages">
-        <h3>Languages</h3>
-        <div class="grid-list">
-            <div>
-                <h4>French</h4>
-              CEFR-C2
-            </div>
-            <div>
-                <h4>English</h4>
-              CEFR-C2
-            </div>
-            <div>
-                <h4>German</h4>
-              CEFR-A2
-            </div>
-            <div>
-                <h4>Dutch</h4>
-              CEFR-A2
-            </div>
-            <div>
-                <h4>Hebrew</h4>
-              CEFR-A1
-            </div>
-        </div>
-      </section>
-      <section id="interests">
-        <h3>Interests</h3>
-        <div class="grid-list">
-            <div>
-                <h4>Queer rights</h4>
-            </div>
-            <div>
-                <h4>Making music</h4>
-            </div>
-            <div>
-                <h4>Live music</h4>
-            </div>
-            <div>
-                <h4>Literature</h4>
-            </div>
-            <div>
-                <h4>Cinema</h4>
-            </div>
-            <div>
-                <h4>Open Source</h4>
-            </div>
-            <div>
-                <h4>Science</h4>
-            </div>
-            <div>
-                <h4>Social sciences</h4>
-            </div>
-            <div>
-                <h4>Analog photography</h4>
-            </div>
-            <div>
-                <h4>Wikipedia</h4>
-            </div>
-            <div>
-                <h4>Internet civil rights activism</h4>
-            </div>
-        </div>
-      </section>
-      <section id="references">
-        <h3>References</h3>
-        <div class="stack">
-              <blockquote>
-                <p>I was working with Matcha as a peer and then as a manager for about 2 years. I would highly recommend Matcha as a proven expert in software development. She is smart, precise, and attentive to details. She is able to take a task, make the entire research, and finally implement it. On the other side, it is easy to communicate with Matcha. She is able to explain difficult concepts with easy language.</p>
+        <section class="project-item">
+            <label for="project-item-0"></label>
     
-                  <p>
-                    <cite>Manu Ustenko, Manager at sennder GmbH</cite>
-                  </p>
-              </blockquote>
+          <header class="clear">
+            <div class="position">Speaker at CodePub Berlin meets Sennder</div>
+            <div class="date">
+              <span class="startDate">Nov 2021</span>
+              <span class="endDate">- Nov 2021</span>
+            </div>
+          </header>
+          <span class="location">
+          <span class="fas fa-map-marker-alt"></span>
+          </span>
+          <ul class="keywords">
+              <li>feminism</li>
+              <li>women-in-tech</li>
+              <li>devops</li>
+              <li>education</li>
+              <li>stem</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p>I introduced the concepts of DevOps and Agile development to a feminine and non-binary audience typically under-represented and showed how it actually is about empowering developers and people in general by focusing on achievable delivery, quicker value cycles, and on building ecosystems.</p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(5)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                STEM training
+              </div>
+              <div class="institution">
+                Self-training
+              </div>
+            </div>
+            <div class="date">
+              <span class="endDate">
+              - Current
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                AWS Solutions Architect – Associate
+              </div>
+            </div>
+            <div class="date">
+              <span class="endDate">
+              - Current
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                Advanced PostgreSQL DBA
+              </div>
+              <div class="institution">
+                Dalibo
+              </div>
+            </div>
+            <div class="date">
+              <span class="endDate">
+              - Current
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                DUT Informatique
+              </div>
+              <div class="institution">
+                IUT de Lens, France
+              </div>
+            </div>
+            <div class="date">
+              <span class="endDate">
+              - Current
+              </span>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Software development</li>
+            <li>System administration</li>
+            <li>Project management</li>
+          </ul>
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                Baccalauréat scientifique
+              </div>
+              <div class="institution">
+                Lycée Édouard Branly, Boulogne sur Mer, France
+              </div>
+            </div>
+            <div class="date">
+              <span class="endDate">
+              - Current
+              </span>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>maths</li>
+            <li>physics</li>
+            <li>mechanics</li>
+            <li>electronics</li>
+            <li>philosophy</li>
+          </ul>
+    
+          <div class="item">
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            French
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native speaker</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency master">
+              <em>Master</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            German
+          </h3>
+          <div class="item">
+            <div class="level fluency intermediate">
+              <em>Intermediate</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Dutch
+          </h3>
+          <div class="item">
+            <div class="level fluency beginner">
+              <em>Beginner</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Hebrew
+          </h3>
+          <div class="item">
+            <div class="level fluency beginner">
+              <em>Beginner</em>
+              <div class="bar"></div>
+            </div>
+          </div>
         </div>
       </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Queer rights
+          </h3>
+            <div class="summary"><p>I am an activist for the rights and autonomy of queer and disabled people.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Making music
+          </h3>
+            <div class="summary"><p>I create electronic music and maintain old (analog) synthesizers. I also play guitar and piano.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Live music
+          </h3>
+            <div class="summary"><p>I am fond of attending electronic music events of all sorts.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Literature
+          </h3>
+            <div class="summary"><p>I am a sci-fi buff, also a dedicated reader of Pratchett, Gaiman, Iain M. Banks and other prominent authors.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Cinema
+          </h3>
+            <div class="summary"><p>I love movies in general and art movies in particular.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Open Source
+          </h3>
+            <div class="summary"><p>I contribute to a number of open source projects both as part of my professional activities and outside of work.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Science
+          </h3>
+            <div class="summary"><p>I am passionate about maths (especially statistics), physics, chemistry, electronics, and spend a hefty amount of time reading or educating myself about these topics.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Social sciences
+          </h3>
+            <div class="summary"><p>I am fond of philosophy and sociology and also have a decent education level in these.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Analog photography
+          </h3>
+            <div class="summary"><p>I shoot and process photos made using mechanical cameras and film (rolls and plates).</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Wikipedia
+          </h3>
+            <div class="summary"><p>I'm a Wikipedia contributor since 2005.</p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Internet civil rights activism
+          </h3>
+            <div class="summary"><p>I have been a member or participant in various actions for civil rights on the Internet since 2008.</p></div>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>References</h2>
+      </header>
+      <section id="references">
+        <div class="item">
+          <blockquote class="reference">
+            &#8220;&#32;I was working with Matcha as a peer and then as a manager for about 2 years. I would highly recommend Matcha as a proven expert in software development. She is smart, precise, and attentive to details. She is able to take a task, make the entire research, and finally implement it. On the other side, it is easy to communicate with Matcha. She is able to explain difficult concepts with easy language.
+    &#32;&#8221;
+          </blockquote>
+          <div class="name">
+            Manu Ustenko, Manager at sennder GmbH
+          </div>
+        </div>
+      </section>
+    </section>
+
   </body>
 </html>
