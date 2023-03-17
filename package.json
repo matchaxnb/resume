@@ -1,0 +1,17 @@
+{
+  "name": "matcha-cv",
+  "version": "1.0.0",
+  "description": "CV for Macha Desoutter (Matcha)",
+  "main": "resume.json",
+  "repository": "git@github.com:matchaxnb/resume.git",
+  "author": "matchaxnb <matchaxnb@github.com>",
+  "license": "CC-BY-ND-4.0",
+  "devDependencies": {
+    "jsonresume-theme-elegant": "^1.16.1",
+    "resume-cli": "^3.0.8",
+    "yaml-js": "^0.3.1"
+  },
+  "scripts": {
+    "build": "npx resume-cli export -r resume.yaml -f html public/resume.html"
+  }
+}

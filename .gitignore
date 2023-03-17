@@ -1,0 +1,4 @@
+node_modules
+resume.json
+yarn-*.log
+public/resume.html

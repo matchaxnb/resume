@@ -1,18 +1,22 @@
 ---
 # based on https://jsonresume.org/schema/
 # but in YAML because i'm a human being after all 
+
+meta:
+  theme: elegant
+
 basics:
   # basic, email
-  name: Matcha (Chloe) Desoutter
+  name: Matcha (Chloé) Desoutter
   label: Staff Software Engineer
   summary: >
-    I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
+      I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
   email: ds.tt.rc@gmail.com
   # phone
   phone: "+33659906332"
   # website
   url: https://matchaxnb.github.io
-  pro files:
+  profiles:
     - network: "LinkedIn" # network name
       url: "https://www.linkedin.com/in/matcha-d/" # url to candidate's profile on the network
     - network: Twitter
@@ -191,7 +195,7 @@ references:
 
 interests:
   - name: Queer rights
-    activity: I am an activist for the rights and autonomy of queer and disabled people
+    activity: I am an activist for the rights and autonomy of queer and disabled people.
   - name: Making music
     activity: I create electronic music and maintain old (analog) synthesizers. I also play guitar and piano.
   - name: Live music
@@ -201,7 +205,7 @@ interests:
   - name: Cinema
     activity: I love movies in general and art movies in particular.
   - name: Open Source
-    activity: I contribute to a number of open source projects both as part of my professional activities and outside of work
+    activity: I contribute to a number of open source projects both as part of my professional activities and outside of work.
   - name: Science
     activity: I am passionate about maths (especially statistics), physics, chemistry, electronics, and spend a hefty amount of time reading or educating myself about these topics.
   - name: Social sciences
@@ -209,6 +213,6 @@ interests:
   - name: Analog photography
     activity: I shoot and process photos made using mechanical cameras and film (rolls and plates).
   - name: Wikipedia
-    activity: I'm a Wikipedia contributor since 2005
+    activity: I'm a Wikipedia contributor since 2005.
   - name: Internet civil rights activism
-    activity: I have been a member or participant in various actions for civil rights on the Internet since 2008
+    activity: I have been a member or participant in various actions for civil rights on the Internet since 2008.
