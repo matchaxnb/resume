@@ -7,8 +7,6 @@
   "author": "matchaxnb <matchaxnb@github.com>",
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
-    "jsonresume-theme-caffeine": "^1.2.3",
-    "jsonresume-theme-elegant": "^1.16.1",
     "jsonresume-theme-stackoverflow": "^2.0.0",
     "resume-cli": "^3.0.8",
     "yaml-js": "^0.3.1"
