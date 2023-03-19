@@ -2,8 +2,9 @@
 # based on https://jsonresume.org/schema/
 # but in YAML because i'm a human being after all 
 
+# this is useful when publishing to the central registry
 meta:
-  theme: elegant
+  theme: stackoverflow
 
 basics:
   # basic, email
@@ -13,7 +14,7 @@ basics:
       I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
   email: ds.tt.rc@gmail.com
   # phone
-  phone: "+33659906332"
+  # phone: "+33659906332"
   # website
   url: https://matchaxnb.github.io
   profiles:
@@ -34,7 +35,7 @@ basics:
 skills:
   - name: Navigating challenges
     level: advanced
-    keywords: [Developer Experience, Open Source, Distributed architecture ]
+    keywords: [ Developer Experience, Open Source, Distributed architecture ]
   - name: Acting on critical engineering domains
     level: advanced
     keywords: [ Large databases, Platform Abstraction, Cross-domain communication, Time-constrained processing ]
