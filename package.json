@@ -7,11 +7,16 @@
   "author": "matchaxnb <matchaxnb@github.com>",
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
-    "jsonresume-theme-stackoverflow": "^2.0.0",
+    "jsonresume-theme-stackoverflow-detailed": "^0.1.0",
+    "moment": "^2.29.4",
     "resume-cli": "^3.0.8",
+    "watch": "^1.0.2",
     "yaml-js": "^0.3.1"
   },
   "scripts": {
-    "build": "npx resume-cli export -r resume.yaml -t stackoverflow -f html public/index.html"
-  }
+    "build:main": "npx resume-cli export -r resume.yaml -t stackoverflow-detailed -f html public/index.html",
+    "build:detailed": "npx resume-cli export -r resume_complete.yaml -t stackoverflow-detailed -f html public/resume_complete.html",
+    "build": "npm run build:main && npm run build:detailed"
+  },
+  "dependencies": {}
 }
