@@ -47,12 +47,13 @@ skills:
       - Led and animated the DevOps Community of Practice at sennder (2021-2022)
       - Established tool stacks and processes for inner source contributions at sennder (2022)
       - Unified the documentation stack at sennder (2022)
-  - name: Problem solving
-    level: expert
-    details:
-      - Fully explore problem space before going to the solution space
-      - Problem solving is about teamwork, I embody this by setting people on the right path instead of solving problems in their stead
-      - Understanding the context is key, and I am one of the faster players in that context
+      - Established a code factory system at Believe Digital (2018-2019)
+    keywords:
+      - Backstage
+      - Meetups
+      - Developer Experience
+      - Inner source
+      - Open source
   - name: Tech Leadership
     subskills:
       - name: Software Architecture
@@ -63,11 +64,24 @@ skills:
         level: intermediate
       - name: Establishing standards
         level: expert
+      - name: Problem solving
+        level: expert
     details:
       - established standards for publishing service metadata and DORA4 metrics at sennder
-      - designed a storage and archival solution to overcome costs and access reliability challenges for accessing assets at Believe Digital
-      - designed and built a database solution to access the Information system from the deployment stack at NBS System
-      - wrote, edited, and published full user and developer documentation for the Backstage developer portal at sennder
+      - established the standard for docs-as-code best practices at sennder (2022)
+      - designed a storage and archival solution to overcome costs and access reliability challenges for accessing assets at Believe Digital (2018-2019)
+      - designed and built a database solution to access the Information system from the deployment stack at NBS System (2016)
+      - wrote, edited, and published full user and developer documentation for the Backstage developer portal at sennder (2022)
+      - I help people fully explore the problem space before dwelling into the more familiar solution space
+      - "Problem solving is about teamwork: I embody this by setting people on the right path instead of solving problems in their stead. This helps the tech organization grow in maturity by fostering autonomy."
+      - Wrote and contributed to a dozen of internal RFC documents at sennder for problem solving
+      - Co-chair and full member of sennder's Engineering Foundations board dedicated to solving the organization's engineering problems
+    keywords:
+      - Collective intelligence
+      - Troubleshooting
+      - Investigation
+      - Root Cause Analysis
+      - Architecture
   - name: Software Engineering
     subskills:
       - name: Python development
@@ -84,11 +98,38 @@ skills:
         level: intermediate
     details:
       - Established DevOps best practices at Believe Digital, bluenove, sennder
-      - Built software using python in all positions starting from NBS System
-      - Recognized internal expert in database performance management at sennder
-      - Contributor to open-source projects written in Golang
-
-
+      - Built software using python in all positions starting from NBS System (2015-present)
+      - Recognized as an internal expert in database performance management at sennder
+      - Audited realtime data collection databases for SFR and other clients (2012-2015)
+      - Contributor to open-source projects written in Golang (Hound, Vale.sh)
+    keywords:
+      - Python
+      - Golang
+      - Shell
+      - PostgreSQL
+      - MySQL
+      - Architecture
+  - name: Platform engineering
+    subskills:
+      - name: Infrastructure-as-code
+        level: expert
+      - name: Kubernetes operations
+        level: intermediate
+      - name: Docker, Compose and Swarm
+        level: expert
+    details:
+      - Transitioned software deployment from shell scripts manually executed to fully automated Docker containers for complex apps (bluenove, 2019-2021)
+      - Migrated apps from ECS to EKS (sennder, 2021-2022)
+      - Co-built Helm deployment charts for internal apps at sennder (2022)
+      - Re-engineered and refactored internal Terraform modules at sennder (2021-2023)
+      - Transitioned ops from manual ops to fully automated Ansible automation at Believe Digital (2017-2019)
+    keywords:
+      - Ansible
+      - Terraform
+      - AWS
+      - DevOps
+      - Continuous Integration
+      - Kubernetes
 work:
   - name: sennder GmbH (road freight automation, 250+ engineers)
     position: Staff Software Engineer, Platform
@@ -127,7 +168,7 @@ work:
       - cleaned up build processes
       - successfully migrated server environments from custom Gentoo distributions to standard Debian systems
     keywords: [ devops, security, storage, system administration, linux, network administration, containers ]
-  - name: NBS System (secure hosting, 20+ engineers)
+  - name: NBS System (PCI DSS web hosting, 20+ engineers)
     url: https://www.nbs-system.com/
     position: R&D Engineer
     summary: >
@@ -166,19 +207,19 @@ education:
   - studyType: STEM training
     institution: "Self-training"
   - studyType: "AWS Solutions Architect – Associate"
-    endDate: "2016"
+    startDate: "2016"
   - studyType: "Advanced PostgreSQL DBA"
-    endDate: "2014"
+    startDate: "2014"
     institution: "Dalibo"
   - studyType: DUT Informatique
-    endDate: "2008"
+    startDate: "2008"
     institution: "IUT de Lens, France"
     courses:
       - Software development
       - System administration
       - Project management
   - studyType: Baccalauréat scientifique
-    endDate: "2006"
+    startDate: "2006"
     institution: "Lycée Édouard Branly, Boulogne sur Mer, France"
     courses:
       - maths
@@ -192,17 +233,11 @@ languages:
     fluency: Native speaker
     years: 34
   - language: English
-    fluency: Master
+    fluency: Bilingual
     years: 24
   - language: German
     fluency: Intermediate
     years: 20
-  - language: Dutch
-    fluency: Beginner
-    years: 10
-  - language: Hebrew
-    fluency: Beginner
-    years: 10
 
 projects:
   - name: Speaker at CodePub Berlin meets Sennder
@@ -227,23 +262,7 @@ references:
 interests:
   - name: Queer rights
     summary: I am an activist for the rights and autonomy of queer and disabled people.
-  - name: Making music
-    summary: I create electronic music and maintain old (analog) synthesizers. I also play guitar and piano.
-  - name: Live music
-    summary: I am fond of attending electronic music events of all sorts.
   - name: Literature
     summary: I am a sci-fi buff, also a dedicated reader of Pratchett, Gaiman, Iain M. Banks and other prominent authors.
-  - name: Cinema
-    summary: I love movies in general and art movies in particular.
-  - name: Open Source
-    summary: I contribute to a number of open source projects both as part of my professional activities and outside of work.
-  - name: Science
-    summary: I am passionate about maths (especially statistics), physics, chemistry, electronics, and spend a hefty amount of time reading or educating myself about these topics.
-  - name: Social sciences
-    summary: I am fond of philosophy and sociology and also have a decent education level in these.
-  - name: Analog photography
-    summary: I shoot and process photos made using mechanical cameras and film (rolls and plates).
   - name: Wikipedia
     summary: I'm a Wikipedia contributor since 2005.
-  - name: Internet civil rights activism
-    summary: I have been a member or participant in various actions for civil rights on the Internet since 2008.
