@@ -29,68 +29,57 @@ basics:
   location:
     countryCode: FR
     city: Paris
-  more_info: resume_complete.html
 
 # A description of the candidate's formal skills and capabilities.
 
 skills:
-  - name: Developer Experience Leadership
-    subskills:
-      - name: Forming communities of practice
-        level: fully proficient
-      - name: Backstage integration
-        level: expert
-      - name: Inner source
-        level: fully proficient
-    details:
-      - Integrated Backstage to sennder's development stack (2022-2023)
-      - Led and animated the DevOps Community of Practice at sennder (2021-2022)
-      - Established tool stacks and processes for inner source contributions at sennder (2022)
-      - Unified the documentation stack at sennder (2022)
-  - name: Problem solving
-    level: expert
-    details:
-      - Fully explore problem space before going to the solution space
-      - Problem solving is about teamwork, I embody this by setting people on the right path instead of solving problems in their stead
-      - Understanding the context is key, and I am one of the faster players in that context
-  - name: Tech Leadership
-    subskills:
-      - name: Software Architecture
-        level: expert
-      - name: Systems Architecture
-        level: expert
-      - name: Producing user specifications
-        level: intermediate
-      - name: Establishing standards
-        level: expert
-    details:
-      - established standards for publishing service metadata and DORA4 metrics at sennder
-      - designed a storage and archival solution to overcome costs and access reliability challenges for accessing assets at Believe Digital
-      - designed and built a database solution to access the Information system from the deployment stack at NBS System
-      - wrote, edited, and published full user and developer documentation for the Backstage developer portal at sennder
-  - name: Software Engineering
-    subskills:
-      - name: Python development
-        level: expert
-      - name: Building scalable and reliable systems
-        level: expert
-      - name: Packaging and release management
-        level: expert
-      - name: DevOps practices
-        level: expert
-      - name: SQL development
-        level: advanced
-      - name: Golang development
-        level: intermediate
-    details:
-      - Established DevOps best practices at Believe Digital, bluenove, sennder
-      - Built software using python in all positions starting from NBS System
-      - Recognized internal expert in database performance management at sennder
-      - Contributor to open-source projects written in Golang
-
+  - name: Navigating challenges
+    level: advanced
+    keywords: [ Developer Experience, Open Source, Distributed architecture ]
+  - name: Acting on critical engineering domains
+    level: advanced
+    keywords: [ Large databases, Platform Abstraction, Cross-domain communication, Time-constrained processing ]
+  - name: Acting on critical people challenges in Engineering
+    level: advanced
+    keywords: [ Forming communities, scaling up engineering into communities ]
+  - name: Engineering Processes
+    level: advanced
+    keywords: [ Kanban, Scrum ]
+  - name: Software Architecture
+    level: master
+    keywords: [ Distributed systems, Scalable systems ]
+  - name: Developer Experience
+    level: master
+    keywords: [ Forming communities, Backstage, Developer-centric infrastructure, Bridging knowledge gaps ]
+  - name: Free/OSS and Engineering culture 
+    level: master
+    keywords: [ Communities of Practice, Inner Source, Meetups, Talks ]
+  - name: Software engineering and development
+    level: master
+    keywords: [ Python, Golang, NodeJS, PHP, Bash and POSIX shell, problem solving ]
+  - name: Relational database systems
+    level: advanced
+    keywords: [ PostgreSQL, MariaDB, MySQL ]
+  - name: Enterprise server environments
+    level: master
+    keywords: [ GNU/Linux, Debian, Alpine ]
+  - name: AWS Cloud architecture
+    level: advanced
+  - name: Cloud environments
+    level: advanced
+    keywords: [ AWS, Scaleway ]
+  - name: DevOps tooling and processes
+    level: master
+    keywords: [ Git, GitLab, GitHub, Ansible, Terraform, Infrastructure as Code, Engineering Assets Management ]
+  - name: Virtualization
+    level: advanced
+    keywords: [ VMWare ESXi and vSphere, Hyper-V, Proxmox, KVM, bhyve ]
+  - name: Containers and Orchestration
+    level: master
+    keywords: [ Kubernetes operations, Docker, Packer, security scanners ]
 
 work:
-  - name: sennder GmbH (road freight automation, 250+ engineers)
+  - name: sennder GmbH (road freight logistics automation, 250+ engineers)
     position: Staff Software Engineer, Platform
     url: https://sennder.com
     startDate: "2021-05-01"
@@ -139,7 +128,7 @@ work:
       - fixed performance issues on large Magento deployments during the seasonal sales
     startDate: "2015-01-01"
     endDate: "2017-01-01"
-  - name: Atasta SAS (IT consulting, 5 employees)
+  - name: Atasta SAS (IT consulting, 5 engineers)
     position: Software Engineer
     summary: >
       I am in charge of the infrastructure aspects of this small company, and also team with the other employees in tasks of software development and deployment. I also assess skills and interview candidates. I do a number of technical meetings, audit sessions, consulting with clients, and help the company shape its general technical direction
@@ -149,7 +138,7 @@ work:
   - name: Freelancer
     position: Technical Consultant
     summary: >
-      I provide small and medium businesses with consulting on their database and web stacks, help them with online shop migrations and general IT operations, system architecture reviews and more services.
+      I provide small and medium businesses with consulting on their database and web stacks, help them with online shop migrations and general IT operations, system architecture reviews and more services. Very diverse client portfolio.
     keywords: [ devops, system administration, ecommerce, relational databases, development, security, containers ]
     startDate: "2010-01-01"
     endDate: "2019-01-01"
@@ -217,7 +206,7 @@ projects:
       - stem
     type: workshop
     summary: >
-      I introduced the concepts of DevOps and Agile development to a feminine and non-binary audience typically under-represented and showed how it actually is about empowering developers and people in general by focusing on achievable delivery, quicker value cycles, and on building ecosystems.
+      1 hour conference prepared peering with a junior I introduced the concepts of DevOps and Agile development to a feminine and non-binary audience typically under-represented and showed how it actually is about empowering developers and people in general by focusing on achievable delivery, quicker value cycles, and on building ecosystems.
 
 references:
   - name: Manu Ustenko, Manager at sennder GmbH
