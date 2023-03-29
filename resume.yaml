@@ -258,7 +258,11 @@ references:
   - name: Manu Ustenko, Manager at sennder GmbH
     reference: >
       I was working with Matcha as a peer and then as a manager for about 2 years. I would highly recommend Matcha as a proven expert in software development. She is smart, precise, and attentive to details. She is able to take a task, make the entire research, and finally implement it. On the other side, it is easy to communicate with Matcha. She is able to explain difficult concepts with easy language.
-
+    more: "https://www.linkedin.com/in/matcha-d/#:~:text=e)%20de%20Matcha-,I%20was%20working%20with%20Matcha%20as%20a%20peer,-and%20then%20as"
+  - name: Gheorghina Gligor, Principal Software Engineer at sennder GmbH
+    reference: >
+      [...] Matcha is an exceptional individual who possesses a unique combination of knowledge, kindness, patience and ability to articulate technical ideas. She has an unparalleled work ethic and is always willing to go above and beyond to ensure that the job is done right. She is a team player who is always willing to lend a hand to her colleagues. Her positive attitude makes her an excellent addition to any team, and her ability to work well under pressure is truly impressive. [...]
+    more: ./rec_gheorghina.pdf
 interests:
   - name: Queer rights
     summary: I am an activist for the rights and autonomy of queer and disabled people.
