@@ -8,7 +8,7 @@
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
-    "jsonresume-theme-stackoverflow-detailed": "^0.2.0",
+    "jsonresume-theme-stackoverflow-detailed": "^0.3.0",
     "moment": "^2.29.4",
     "resume-cli": "^3.0.8",
     "watch": "^1.0.2",
