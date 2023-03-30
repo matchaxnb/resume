@@ -17,7 +17,8 @@
   "scripts": {
     "build:main": "npx resume-cli export -r resume.yaml -t stackoverflow-detailed -f html public/index.html",
     "build:detailed": "npx resume-cli export -r resume_complete.yaml -t stackoverflow-detailed -f html public/resume_complete.html",
-    "build": "npm run build:main && npm run build:detailed"
+    "build:extra": "npx resume-cli export -r resume_extra.yaml -t stackoverflow-detailed -f html public/resume_extra.html",
+    "build": "npm run build:main && npm run build:detailed && npm run build:extra"
   },
   "dependencies": {},
   "config": {

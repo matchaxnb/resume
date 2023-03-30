@@ -1,0 +1,176 @@
+---
+# based on https://jsonresume.org/schema/
+# but in YAML because i'm a human being after all 
+
+# this is useful when publishing to the central registry
+meta:
+  theme: stackoverflow
+
+basics:
+  # basic, email
+  name: Matcha Desoutter
+  label: Staff Software Engineer
+  summary: >
+      I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
+      
+      Note that this is not my main resume but an extension of it for the curious. In this document, I reveal more of what I do that is not my core business skills. For these, see my main resume page.
+  url: https://matchaxnb.github.io/resume/
+  profiles:
+    - network: "LinkedIn" # network name
+      url: "https://www.linkedin.com/in/matcha-d/" # url to candidate's profile on the network
+      username: matcha-d
+    - network: Twitter
+      username: "matcha_x" # user handle of the candidate on the network
+    - network: GitHub
+      url: https://github.com/matchaxnb
+      username: matchaxnb
+  location:
+    countryCode: FR
+    city: Paris
+
+# A description of the candidate's formal skills and capabilities.
+
+skills:
+  - name: Developer Experience and Tech Leadership, Software and Platform Engineering
+    details:
+    - See details on my main resume page.
+  - name: Collective intelligence and innovation
+    subskills:
+      - name: Moderating debates
+        level: advanced
+      - name: Defending ideas
+        level: advanced
+      - name: Establishing networks of mutual trust
+        level: advanced
+      - name: Campaigning
+        level: advanced
+    details:
+      - I have run on the mayor list for the 2020 Municipal Elections in Paris, France (18ème arrondissement district) on the 4th position (potentially eligible). For about a year, I co-managed the pre-campaign and campaign activities with a few other list members, ensured engagement with local citizens and other political movements, and kept the activists invested into the campaign.
+      - Set-up a collective intelligence platform based on Decidim for the 18ème arrondissement district of Paris.
+      - At bluenove, I have acquired skills in debating and defending ideas around open innovation as part of the regular processes of the company.
+  - name: Public speaking and activism
+    subskills:
+      - name: Building a narrative
+        level: advanced
+      - name: Delivering a narrative
+        level: intermediate
+    details:
+      - Spoke at sennder Learning Week about trans and queer people in the industry, with amazing impact.
+      - Spoke at sennder meets CodePub Berlin about women and non-binary people in the tech industry and specifically about empowering with DevOps, with success.
+      - Campaigned and gave interviews for the 2020 Paris Municipal elections, which involved preparing and delivering messages rich with narrative tones.
+  - name: Audiovisual production
+    subskills:
+      - name: Camera operator
+        level: intermediate
+      - name: Sound operator
+        level: intermediate
+      - name: Light operator
+        level: intermediate
+      - name: Video editor and compositor
+        level: advanced
+    details:
+      - Founding member of the board and volunteer of the non-profit organization Medusa that focuses on empowering LGBTQIA+ with audiovisual media.
+      - Chief engineer of the CPClub web TV and online club for singer-songwriter Cyril Paulus (2010-2013), in charge of building live and replay WebTV capabilities and download features (pre-streaming era). In addition to engineering missions, co-responsible for editing, video compositing and camera operation.
+      - "Assistant Director on student films (director: Christine Rougemont)".
+languages:
+  - language: French
+    fluency: Native speaker
+    years: 34
+  - language: English
+    fluency: Bilingual
+    years: 24
+  - language: German
+    fluency: Intermediate
+    years: 20
+  - language: Hebrew
+    fluency: Basic
+    years: 10
+  - language: Dutch
+    fluency: Basic
+    years: 7
+
+projects:
+  - name: He-Vous
+    startDate: "2020-04"
+    endDate: "8999"
+    keywords:
+      - Citizenship
+      - Activism
+      - Call-to-Action
+      - PHP
+    type: open-source platform
+    summary: >
+      I implemented a quick app designed to solicit deciders on Twitter to try to weigh on politics. This was based on an external app that was unmaintained and bogus. Hosting was done on Docker Swarm and distribution on Docker. Currently on pause waiting for a serverless model port.
+    url: https://github.com/matchaxnb/he-vous
+  - name: qmk_firmware MIDI drum sequencer
+    startDate: "2022-04"
+    endDate: "8999"
+    keywords:
+      - Music
+      - MIDI controller
+      - Keyboard
+      - C
+      - Microcontroller
+    type: custom hardware firmware
+    summary: >
+      I implemented a USB-MIDI drum sequencer based on the Planck keyboard (Planck-EZ variant). During the course of this project, I learned a lot about the MIDI specification, microcontroller programming, real-time constraints in embedded hardware and honed up my low-level-programming skills.
+    url: https://github.com/matchaxnb/qmk_firmware/tree/matchaxnb
+  - name: pyshabbes
+    startDate: "2018-08"
+    endDate: "2018-08"
+    keywords:
+      - Python
+      - Mathematics
+      - Astronomy
+      - Judaism
+    type: software library
+    summary: >
+      I implemented a tool in pure python to compute sunrise and sunset hours at any given location on Earth based on its GPS coordinates. The goal was to help religion observant people identify when night is starting based on various religious definitions, and to explore 3D trigonometry.
+    url: https://github.com/matchaxnb/pyshabbes
+  - name: light-bright-mirror
+    startDate: "2020-04"
+    endDate: "8999"
+    type: open-source platform
+    summary: >
+      I implemented a web platform for sharing a large number of stories about given thematics. The goal is to stir the collective imagination and get people to innovate together online. This was done during my tenure at bluenove, as a proof of concept of possible re-implementation efforts.
+    url: https://github.com/matchaxnb/happy-reflective-surface/
+    keywords:
+      - Collective intelligence
+      - WordPress
+      - PHP
+  - name: hotplate-with-pid
+    startDate: "2022-07"
+    enddate: "8999"
+    url: https://github.com/matchaxnb/hotplate-with-pid
+    type: open-source arduino project
+    summary: >
+      I designed and implemented a reflowing plate with PID (Proportional - Integral - Derivative) control. This system allows to transform any electric hotplate into a device that will follow a given temperature profile in a self-adjusting manner. On pause until I find another hotplate to ruin.
+    keywords:
+      - Electronics
+      - Microcontroller
+      - Arduino
+      - C
+
+interests:
+  - name: Queer rights
+    summary: I am an activist for the rights and autonomy of queer and disabled people.
+  - name: Making music
+    summary: I create electronic music and maintain old (analog) synthesizers. I also play guitar and piano.
+  - name: Live music
+    summary: I am fond of attending electronic music events of all sorts.
+  - name: Literature
+    summary: I am a sci-fi buff, also a dedicated reader of Pratchett, Gaiman, Iain M. Banks and other prominent authors.
+  - name: Cinema
+    summary: I love movies in general and art movies in particular.
+  - name: Open Source
+    summary: I contribute to a number of open source projects both as part of my professional activities and outside of work.
+  - name: Science
+    summary: I am passionate about maths (especially statistics), physics, chemistry, electronics, and spend a hefty amount of time reading or educating myself about these topics.
+  - name: Social sciences
+    summary: I am fond of philosophy and sociology and also have a decent education level in these.
+  - name: Analog photography
+    summary: I shoot and process photos made using mechanical cameras and film (rolls and plates).
+  - name: Wikipedia
+    summary: I'm a Wikipedia contributor since 2005.
+  - name: Internet civil rights activism
+    summary: I have been a member or participant in various actions for civil rights on the Internet since 2008.
