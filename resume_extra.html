@@ -1,0 +1,1264 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Matcha Desoutter</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+blockquote {
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item.full-width {
+  width: 100%;
+}
+#skills .item .keywords {
+  width: 15em;
+}
+
+#skills .full-width .skill-data {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#skills .full-width .skills-details {
+  width: 50%;
+}
+
+#skills .full-width .keywords {
+  width: 100%;
+  text-align: center;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after,
+.level.basic .bar::after {
+  background: #3b38df;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fully.proficient .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.expert .bar::after,
+.level.bilingual .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+  margin-bottom: 1em;
+}
+
+#references .more-info {
+  font-size: 0.7em;
+  font-weight: normal;
+  font-style: italic;
+}
+.section > section > section {
+  margin-bottom: 1rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  #profiles a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 1em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  ul.keywords::before {
+    content: "Skills acquired: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Matcha Desoutter</h1>
+    			<h2 class="label">Staff Software Engineer</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="city">Paris,</span>
+    			<span class="countryCode">FR</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/matcha-d/">matcha-d</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-twitter twitter social"></span>
+    					<span>matcha_x</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/matchaxnb">matchaxnb</a>
+    					</span>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section">
+    		<section class="main-summary">
+    			<div><p><p>I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&amp;D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.</p><p>Note that this is not my main resume but an extension of it for the curious. In this document, I reveal more of what I do that is not my core business skills. For these, see my main resume page.</p></p></div>
+    		</section>
+    	</section>
+    
+    <section class="section">
+    	<header>
+    		<h2 class="section-title">Skills</h2>
+    	</header>
+    	<section id="skills">
+        <div class="item full-width">
+            <h3 class="name">
+              Developer Experience and Tech Leadership, Software and Platform Engineering
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>See details on my main resume page.</li>
+              </ul>
+            </div>
+          </div>
+    
+    		</div>
+        <div class="item full-width">
+            <h3 class="name">
+              Collective intelligence and innovation
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Moderating debates
+                </h4>
+                <div class="level advanced">
+                    <em>advanced</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Defending ideas
+                </h4>
+                <div class="level advanced">
+                    <em>advanced</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Establishing networks of mutual trust
+                </h4>
+                <div class="level advanced">
+                    <em>advanced</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Campaigning
+                </h4>
+                <div class="level advanced">
+                    <em>advanced</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>I have run on the mayor list for the 2020 Municipal Elections in Paris, France (18ème arrondissement district) on the 4th position (potentially eligible). For about a year, I co-managed the pre-campaign and campaign activities with a few other list members, ensured engagement with local citizens and other political movements, and kept the activists invested into the campaign.</li>
+              <li>Set-up a collective intelligence platform based on Decidim for the 18ème arrondissement district of Paris.</li>
+              <li>At bluenove, I have acquired skills in debating and defending ideas around open innovation as part of the regular processes of the company.</li>
+              </ul>
+            </div>
+          </div>
+    
+    		</div>
+        <div class="item full-width">
+            <h3 class="name">
+              Public speaking and activism
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Building a narrative
+                </h4>
+                <div class="level advanced">
+                    <em>advanced</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Delivering a narrative
+                </h4>
+                <div class="level intermediate">
+                    <em>intermediate</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>Spoke at sennder Learning Week about trans and queer people in the industry, with amazing impact.</li>
+              <li>Spoke at sennder meets CodePub Berlin about women and non-binary people in the tech industry and specifically about empowering with DevOps, with success.</li>
+              <li>Campaigned and gave interviews for the 2020 Paris Municipal elections, which involved preparing and delivering messages rich with narrative tones.</li>
+              </ul>
+            </div>
+          </div>
+    
+    		</div>
+        <div class="item full-width">
+            <h3 class="name">
+              Audiovisual production
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Camera operator
+                </h4>
+                <div class="level intermediate">
+                    <em>intermediate</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Sound operator
+                </h4>
+                <div class="level intermediate">
+                    <em>intermediate</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Light operator
+                </h4>
+                <div class="level intermediate">
+                    <em>intermediate</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Video editor and compositor
+                </h4>
+                <div class="level advanced">
+                    <em>advanced</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>Founding member of the board and volunteer of the non-profit organization Medusa that focuses on empowering LGBTQIA+ with audiovisual media.</li>
+              <li>Chief engineer of the CPClub web TV and online club for singer-songwriter Cyril Paulus (2010-2013), in charge of building live and replay WebTV capabilities and download features (pre-streaming era). In addition to engineering missions, co-responsible for editing, video compositing and camera operation.</li>
+              <li>Assistant Director on student films (director: Christine Rougemont).</li>
+              </ul>
+            </div>
+          </div>
+    
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Projects <span class="item-count">(5)</span></h2>
+      </header>
+      <section id="projects">
+        <section class="project-item">
+            <label for="project-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">He-Vous</div>
+              <div class="date"><span class="rangeDate">Apr 2020 - Current</span></div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://github.com/matchaxnb/he-vous">https://github.com/matchaxnb/he-vous</a>
+          </span>
+          <ul class="keywords">
+              <li>Citizenship</li>
+              <li>Activism</li>
+              <li>Call-to-Action</li>
+              <li>PHP</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p><p>I implemented a quick app designed to solicit deciders on Twitter to try to weigh on politics. This was based on an external app that was unmaintained and bogus. Hosting was done on Docker Swarm and distribution on Docker. Currently on pause waiting for a serverless model port.</p></p></div>
+          </div>
+        </section>
+        <section class="project-item">
+            <label for="project-item-1"></label>
+    
+          <header class="clear">
+            <div class="position">qmk_firmware MIDI drum sequencer</div>
+              <div class="date"><span class="rangeDate">Apr 2022 - Current</span></div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://github.com/matchaxnb/qmk_firmware/tree/matchaxnb">https://github.com/matchaxnb/qmk_firmware/tree/matchaxnb</a>
+          </span>
+          <ul class="keywords">
+              <li>Music</li>
+              <li>MIDI controller</li>
+              <li>Keyboard</li>
+              <li>C</li>
+              <li>Microcontroller</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p><p>I implemented a USB-MIDI drum sequencer based on the Planck keyboard (Planck-EZ variant). During the course of this project, I learned a lot about the MIDI specification, microcontroller programming, real-time constraints in embedded hardware and honed up my low-level-programming skills.</p></p></div>
+          </div>
+        </section>
+        <section class="project-item">
+            <label for="project-item-2"></label>
+    
+          <header class="clear">
+            <div class="position">pyshabbes</div>
+              <div class="date"><span class="rangeDate">Aug 2018</span></div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://github.com/matchaxnb/pyshabbes">https://github.com/matchaxnb/pyshabbes</a>
+          </span>
+          <ul class="keywords">
+              <li>Python</li>
+              <li>Mathematics</li>
+              <li>Astronomy</li>
+              <li>Judaism</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p><p>I implemented a tool in pure python to compute sunrise and sunset hours at any given location on Earth based on its GPS coordinates. The goal was to help religion observant people identify when night is starting based on various religious definitions, and to explore 3D trigonometry.</p></p></div>
+          </div>
+        </section>
+        <section class="project-item">
+            <label for="project-item-3"></label>
+    
+          <header class="clear">
+            <div class="position">light-bright-mirror</div>
+              <div class="date"><span class="rangeDate">Apr 2020 - Current</span></div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://github.com/matchaxnb/happy-reflective-surface/">https://github.com/matchaxnb/happy-reflective-surface/</a>
+          </span>
+          <ul class="keywords">
+              <li>Collective intelligence</li>
+              <li>WordPress</li>
+              <li>PHP</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p><p>I implemented a web platform for sharing a large number of stories about given thematics. The goal is to stir the collective imagination and get people to innovate together online. This was done during my tenure at bluenove, as a proof of concept of possible re-implementation efforts.</p></p></div>
+          </div>
+        </section>
+        <section class="project-item">
+            <label for="project-item-4"></label>
+    
+          <header class="clear">
+            <div class="position">hotplate-with-pid</div>
+              <div class="date"><span class="rangeDate">Jul 2022</span></div>
+          </header>
+          <span class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://github.com/matchaxnb/hotplate-with-pid">https://github.com/matchaxnb/hotplate-with-pid</a>
+          </span>
+          <ul class="keywords">
+              <li>Electronics</li>
+              <li>Microcontroller</li>
+              <li>Arduino</li>
+              <li>C</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p><p>I designed and implemented a reflowing plate with PID (Proportional - Integral - Derivative) control. This system allows to transform any electric hotplate into a device that will follow a given temperature profile in a self-adjusting manner. On pause until I find another hotplate to ruin.</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            French
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native speaker</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency bilingual">
+              <em>Bilingual</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            German
+          </h3>
+          <div class="item">
+            <div class="level fluency intermediate">
+              <em>Intermediate</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Hebrew
+          </h3>
+          <div class="item">
+            <div class="level fluency basic">
+              <em>Basic</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Dutch
+          </h3>
+          <div class="item">
+            <div class="level fluency basic">
+              <em>Basic</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Queer rights
+          </h3>
+            <div class="summary"><p><p>I am an activist for the rights and autonomy of queer and disabled people.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Making music
+          </h3>
+            <div class="summary"><p><p>I create electronic music and maintain old (analog) synthesizers. I also play guitar and piano.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Live music
+          </h3>
+            <div class="summary"><p><p>I am fond of attending electronic music events of all sorts.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Literature
+          </h3>
+            <div class="summary"><p><p>I am a sci-fi buff, also a dedicated reader of Pratchett, Gaiman, Iain M. Banks and other prominent authors.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Cinema
+          </h3>
+            <div class="summary"><p><p>I love movies in general and art movies in particular.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Open Source
+          </h3>
+            <div class="summary"><p><p>I contribute to a number of open source projects both as part of my professional activities and outside of work.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Science
+          </h3>
+            <div class="summary"><p><p>I am passionate about maths (especially statistics), physics, chemistry, electronics, and spend a hefty amount of time reading or educating myself about these topics.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Social sciences
+          </h3>
+            <div class="summary"><p><p>I am fond of philosophy and sociology and also have a decent education level in these.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Analog photography
+          </h3>
+            <div class="summary"><p><p>I shoot and process photos made using mechanical cameras and film (rolls and plates).</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Wikipedia
+          </h3>
+            <div class="summary"><p><p>I'm a Wikipedia contributor since 2005.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Internet civil rights activism
+          </h3>
+            <div class="summary"><p><p>I have been a member or participant in various actions for civil rights on the Internet since 2008.</p></p></div>
+        </div>
+      </section>
+    </section>
+
+    
+  </body>
+</html>
