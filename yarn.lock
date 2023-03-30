@@ -3288,10 +3288,10 @@ jsonresume-theme-even@^0.6.0:
     micromark "^2.11.4"
     striptags "^3.1.1"
 
-jsonresume-theme-stackoverflow-detailed@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/jsonresume-theme-stackoverflow-detailed/-/jsonresume-theme-stackoverflow-detailed-0.2.0.tgz#29c091a90e8cd3ae85f1538a01c59ba03d348f8b"
-  integrity sha512-oImz8zynhlQMyNc6iV0zNqCPmbXPOnYk7+c43Mk506V4kCuCCA0fH+3srrau2anMGA4swh1y6IolAtnpfAuj6w==
+jsonresume-theme-stackoverflow-detailed@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/jsonresume-theme-stackoverflow-detailed/-/jsonresume-theme-stackoverflow-detailed-0.3.1.tgz#7a05d593fa510aa4c8509977f5f91b4a41361773"
+  integrity sha512-5prBk7x0WARgbkfVY4LgYLOIsYml4BQ09Xlvex5RXmED6ROE/7HMb6Lpui3/0mpkQ/tOI8NjYh9x4PUXhjcQ1w==
   dependencies:
     handlebars "^4.7.7"
     markdown-it "^13.0.1"
@@ -3897,6 +3897,11 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha512-xTgYBc3fuo7Yt7JbiuFxSYGToMoz8fLoE6TC9Wx1P/u+LfeThMOAqmuyECnlBaaJb+u1m9hHiXUEtwW4OzfUJg==
+
+prettier@^2.8.7:
+  version "2.8.7"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.7.tgz#bb79fc8729308549d28fe3a98fce73d2c0656450"
+  integrity sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==
 
 pretty-format@^22.4.3:
   version "22.4.3"

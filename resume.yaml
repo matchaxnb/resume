@@ -1,6 +1,6 @@
 ---
 # based on https://jsonresume.org/schema/
-# but in YAML because i'm a human being after all 
+# but in YAML because i'm a human being after all
 
 # this is useful when publishing to the central registry
 meta:
@@ -11,7 +11,7 @@ basics:
   name: Matcha Desoutter
   label: Staff Software Engineer
   summary: >
-      I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
+    I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
   email: ds.tt.rc@gmail.com
   # phone
   # phone: "+33659906332"
@@ -138,7 +138,14 @@ work:
     endDate: "2023-03"
     summary: >
       As a Staff Software Engineer in the Platform BA, I take part in building sennder's internal platform that helps developers deploy numerous services as the company switches from a monolithic app model to a distributed asynchronous architecture. I also initiate the Developer Experience initiative and set the company on a path towards friction-less knowledge sharing across an Engineering community of 200+ people. When I am not doing this, I interview a large number of engineers so that more talented people join forces with us.
-    keywords: [ DevOps, Architecture, Technical leadership, Developer experience, Open source ]
+    keywords:
+      [
+        DevOps,
+        Architecture,
+        Technical leadership,
+        Developer experience,
+        Open source,
+      ]
     highlights:
       - built tooling to migrate infrastructure to and from AWS ECS to EKS and for cross-account RDS migrations
       - co-built and led the DevOps and Infrastructure Community of Practice
@@ -150,7 +157,18 @@ work:
     endDate: "2021-05"
     summary: >
       DevOps-wise, I build the tools that deploy stacks of open source collective intelligence solutions and as co-Tech Lead I help developers study technical problems and produce elegant and efficient algorithmic and architectural solutions to these.
-    keywords: [ DevOps, Architecture, Technical leadership, System administration, Network administration, Relational databases, Development, Security, Containers ]
+    keywords:
+      [
+        DevOps,
+        Architecture,
+        Technical leadership,
+        System administration,
+        Network administration,
+        Relational databases,
+        Development,
+        Security,
+        Containers,
+      ]
     highlights:
       - cut down deployment time for the solutions from 1 week with large inefficient infrastructure to 2 hours (on dedicated servers)
       - cut down hosting costs massively
@@ -168,13 +186,23 @@ work:
       - successfully tackled complex database migrations touching realtime workflows
       - cleaned up build processes
       - successfully migrated server environments from custom Gentoo distributions to standard Debian systems
-    keywords: [ DevOps, Security, Storage, System administration, Linux, Network administration, Containers ]
+    keywords:
+      [
+        DevOps,
+        Security,
+        Storage,
+        System administration,
+        Linux,
+        Network administration,
+        Containers,
+      ]
   - name: NBS System (PCI DSS web hosting, 20+ engineers)
     url: https://www.nbs-system.com/
     position: R&D Engineer
     summary: >
       I work in the 3-person R&D team as a backend python developer, solving problems pertaining to scaling an Information System, general performance, reliability. I also perform consulting missions for clients who need special expertise on relational databases.
-    keywords: [ DevOps, System administration, Linux, Relational databases, Development ]
+    keywords:
+      [DevOps, System administration, Linux, Relational databases, Development]
     highlights:
       - unblocked massively slow information system accesses by building a smart middleware
       - integrated new deployment platforms in addition to Xen and KVM (VMware vSphere)
@@ -187,12 +215,29 @@ work:
       I am in charge of the infrastructure aspects of this small company, and also team with the other employees in tasks of software development and deployment. I also assess skills and interview candidates. I do a number of technical meetings, audit sessions, consulting with clients, and help the company shape its general technical direction
     startDate: "2012-01"
     endDate: "2015-01"
-    keywords: [ DevOps, System administration, Development, Linux, Relational databases, Auditing ]
+    keywords:
+      [
+        DevOps,
+        System administration,
+        Development,
+        Linux,
+        Relational databases,
+        Auditing,
+      ]
   - name: Freelancer
     position: Technical Consultant
     summary: >
       I provide small and medium businesses with consulting on their database and web stacks, help them with online shop migrations and general IT operations, system architecture reviews and more services.
-    keywords: [ DevOps, System administration, E-commerce, Relational databases, Development, Security, Containers ]
+    keywords:
+      [
+        DevOps,
+        System administration,
+        E-commerce,
+        Relational databases,
+        Development,
+        Security,
+        Containers,
+      ]
     startDate: "2010-01"
     endDate: "2019-01"
   - name: Nerim SAS (web hosting and ISP, 10+ engineers)
@@ -201,7 +246,7 @@ work:
     startDate: "2009-01"
     endDate: "2009-07"
     position: System Administrator
-    keywords: [ Customer management, System administration, Linux ]
+    keywords: [Customer management, System administration, Linux]
 
 # The 'education' section describes the candidate's formal education, including college and university, continuing education, and standalone programs and courses.
 education:

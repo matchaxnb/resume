@@ -1,6 +1,6 @@
 ---
 # based on https://jsonresume.org/schema/
-# but in YAML because i'm a human being after all 
+# but in YAML because i'm a human being after all
 
 # this is useful when publishing to the central registry
 meta:
@@ -11,9 +11,9 @@ basics:
   name: Matcha Desoutter
   label: Staff Software Engineer
   summary: >
-      I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
-      
-      Note that this is not my main resume but an extension of it for the curious. In this document, I reveal more of what I do that is not my core business skills. For these, see my main resume page.
+    I am passionate about engineering, engineers, developer experience, and problem solving. I started my career in backend engineering, pushed forward with R&D, helped a number of companies transition to DevOps, and now take pride in forming communities of engineers centered around problem solving, tech stacks, and improving efficiency in this post-COVID world in which physical spaces are harder to navigate. I'm obsessive about defining the problem space well and love delivering the right solution at the right time. I also love programming and constructing beautiful software designs.
+
+    Note that this is not my main resume but an extension of it for the curious. In this document, I reveal more of what I do that is not my core business skills. For these, see my main resume page.
   url: https://matchaxnb.github.io/resume/
   profiles:
     - network: "LinkedIn" # network name
@@ -33,7 +33,7 @@ basics:
 skills:
   - name: Developer Experience and Tech Leadership, Software and Platform Engineering
     details:
-    - See details on my main resume page.
+      - See details on my main resume page.
   - name: Collective intelligence and innovation
     subskills:
       - name: Moderating debates
@@ -71,7 +71,8 @@ skills:
     details:
       - Founding member of the board and volunteer of the non-profit organization Medusa that focuses on empowering LGBTQIA+ with audiovisual media.
       - Chief engineer of the CPClub web TV and online club for singer-songwriter Cyril Paulus (2010-2013), in charge of building live and replay WebTV capabilities and download features (pre-streaming era). In addition to engineering missions, co-responsible for editing, video compositing and camera operation.
-      - "Assistant Director on student films (director: Christine Rougemont)".
+      - "Assistant Director on student films (director: Christine Rougemont)."
+
 languages:
   - language: French
     fluency: Native speaker

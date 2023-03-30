@@ -10,6 +10,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "jsonresume-theme-stackoverflow-detailed": "^0.3.0",
     "moment": "^2.29.4",
+    "prettier": "^2.8.7",
     "resume-cli": "^3.0.8",
     "watch": "^1.0.2",
     "yaml-js": "^0.3.1"
