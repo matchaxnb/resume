@@ -1,0 +1,321 @@
+---
+# basé sur https://jsonresume.org/schema/
+# mais en YAML car je suis un être humain après tout
+
+# utile lors de la publication dans le registre central
+meta:
+  theme: stackoverflow
+
+basics:
+  # informations de base, email
+  name: Matcha Desoutter
+  label: Ingénieur logiciel principal
+  summary: >
+    Je suis passionné par l'ingénierie, les ingénieurs, l'expérience des développeurs et la résolution de problèmes. J'ai commencé ma carrière dans l'ingénierie backend, j'ai progressé avec la R&D, aidé plusieurs entreprises à passer à DevOps, et je suis maintenant fier de former des communautés d'ingénieurs axées sur la résolution de problèmes, les piles technologiques et l'amélioration de l'efficacité dans ce monde post-COVID où les espaces physiques sont plus difficiles à naviguer. Je suis obsédé par la définition précise de l'espace du problème et j'adore fournir la bonne solution au bon moment. J'aime aussi la programmation et la construction de conceptions logicielles élégantes.
+  email: ds.tt.rc@gmail.com
+  # téléphone
+  # téléphone: "+33659906332"
+  # site web
+  url: https://matchaxnb.github.io
+  profiles:
+    - network: "LinkedIn" # nom du réseau
+      url: "https://www.linkedin.com/in/matcha-d/" # URL du profil du candidat sur le réseau
+      username: matcha-d
+    - network: Twitter
+      username: "matcha_x" # identifiant de l'utilisateur du candidat sur le réseau
+    - network: GitHub
+      url: https://github.com/matchaxnb
+      username: matchaxnb
+  location:
+    countryCode: FR
+    city: Paris
+  more_info: resume_extra.html
+# Une description des compétences et capacités formelles du candidat.
+
+skills:
+  - name: Leadership en expérience de développement
+    subskills:
+      - name: Formation de communautés de pratique
+        level: pleinement compétent
+      - name: Intégration Backstage
+        level: expert
+      - name: Inner source
+        level: pleinement compétent
+    details:
+      - Intégration de Backstage à la pile de développement de sennder (2022-2023)
+      - Animation de la Communauté de Pratique DevOps chez sennder (2021-2022)
+      - Établissement de piles d'outils et de processus pour les contributions en source interne chez sennder (2022)
+      - Unification de la pile de documentation chez sennder (2022)
+      - Établissement d'un système de production de code chez Believe Digital (2018-2019)
+    keywords:
+      - Backstage
+      - Meetups
+      - Expérience du développeur
+      - Inner source
+      - Open source
+  - name: Leadership technologique
+    subskills:
+      - name: Architecture logicielle
+        level: expert
+      - name: Architecture des systèmes
+        level: expert
+      - name: Rédaction de spécifications utilisateur
+        level: intermédiaire
+      - name: Établissement de normes
+        level: expert
+      - name: Résolution de problèmes
+        level: expert
+    details:
+      - Établissement de normes pour la publication de métadonnées de services et de métriques DORA4 chez sennder
+      - Établissement de la norme des meilleures pratiques de documentation en tant que code chez sennder (2022)
+      - Conception d'une solution de stockage et d'archivage pour surmonter les défis de coûts et de fiabilité d'accès aux actifs chez Believe Digital (2018-2019)
+      - Conception et construction d'une solution de base de données pour accéder au système d'information depuis la pile de déploiement chez NBS System (2016)
+      - Rédaction, édition et publication de la documentation complète pour les utilisateurs et les développeurs du portail développeur Backstage chez sennder (2022)
+      - J'aide les gens à explorer pleinement l'espace du problème avant de s'engager dans l'espace de solution plus familier.
+      - "La résolution de problèmes est une question d'équipe : je l'incarne en guidant les gens sur la bonne voie au lieu de résoudre les problèmes à leur place. Cela aide l'organisation technologique à mûrir en favorisant l'autonomie."
+      - Rédaction et contribution à une douzaine de documents RFC internes chez sennder pour la résolution de problèmes
+      - Coprésident et membre à part entière du conseil d'administration Foundations Engineering de sennder dédié à la résolution des problèmes d'ingénierie de l'organisation.
+    keywords:
+      - Intelligence collective
+      - Dépannage
+      - Enquête
+      - Analyse des causes profondes
+      - Architecture
+  - name: Génie logiciel
+    subskills:
+      - name: Développement en Python
+        level: expert
+      - name: Construction de systèmes évolutifs et fiables
+        level: expert
+      - name: Gestion des packages et des versions
+        level: expert
+      - name: Pratiques DevOps
+        level: expert
+      - name: Développement SQL
+        level: avancé
+      - name: Développement en Golang
+        level: intermédiaire
+    details:
+      - Établissement des meilleures pratiques DevOps chez Believe Digital, bluenove, sennder
+      - Construction de logiciels en utilisant Python dans toutes les positions depuis NBS System (2015-présent)
+      - Reconnu en tant qu'expert interne en gestion des performances de base de données chez sennder
+      - Audit de bases de données de collecte de données en temps réel pour SFR et d'autres clients (2012-2015)
+      - Contributeur à des projets open source écrits en Golang (Hound, Vale.sh)
+    keywords:
+      - Python
+      - Golang
+      - Shell
+      - PostgreSQL
+      - MySQL
+      - Architecture
+  - name: Ingénierie de plateforme
+    subskills:
+      - name: Infrastructure en tant que code
+        level: expert
+      - name: Opérations Kubernetes
+        level: intermédiaire
+      - name: Docker, Compose et Swarm
+        level: expert
+    details:
+      - Transition du déploiement logiciel à partir de scripts shell exécutés manuellement vers des conteneurs Docker entièrement automatisés pour des applications complexes (bluenove, 2019-2021)
+      - Migration d'applications d'ECS à EKS (sennder, 2021-2022)
+      - Co-conception de graphiques de déploiement Helm pour des applications internes chez sennder (2022)
+      - Réingénierie et refonte des modules internes Terraform chez sennder (2021-2023)
+      - Transition des opérations du manuel à l'approvisionnement et à la configuration entièrement automatisés d'Ansible chez Believe Digital (2017-2019)
+    keywords:
+      - Ansible
+      - Terraform
+      - AWS
+      - DevOps
+      - Intégration continue
+      - Kubernetes
+work:
+  - name: sennder GmbH (automatisation du fret routier, 250+ ingénieurs)
+    position: Ingénieur logiciel principal, Plateforme
+    url: https://sennder.com
+    startDate: "2021-05"
+    endDate: "2023-03"
+    summary: >
+      En tant qu'Ingénieur logiciel principal dans le domaine de la Plateforme, je participe à la construction de la plateforme interne de sennder qui aide les développeurs à déployer de nombreux services alors que l'entreprise passe d'un modèle d'application monolithique à une architecture distribuée asynchrone. J'initie également l'initiative Developer Experience et oriente l'entreprise vers un partage de connaissances sans friction au sein d'une communauté d'ingénieurs de plus de 200 personnes. Quand je ne fais pas cela, j'interviewe un grand nombre d'ingénieurs afin que des personnes talentueuses se joignent à nous.
+    keywords:
+      [
+        DevOps,
+        Architecture,
+        Leadership technique,
+        Expérience du développeur,
+        Open source,
+      ]
+    highlights:
+      - développé des outils pour migrer l'infrastructure vers et depuis AWS ECS vers EKS et pour les migrations de bases de données RDS entre comptes
+      - co-créé et dirigé la Communauté de Pratique DevOps et Infrastructure
+      - initié l'initiative Developer Experience pour 200 ingénieurs, inspirant d'autres ingénieurs principaux à faire de même avec les outils QA et frontend
+  - name: bluenove (conseil et ingénierie en intelligence collective, 10 ingénieurs)
+    position: Ingénieur DevOps Senior
+    url: https://bluenove.com
+    startDate: "2019-04"
+    endDate: "2021-05"
+    summary: >
+      Du point de vue DevOps, je construis les outils qui déploient des piles de solutions open source d'intelligence collective et en tant que co-Tech Lead, j'aide les développeurs à étudier les problèmes techniques et à produire des solutions algorithmiques et architecturales élégantes et efficaces.
+    keywords:
+      [
+        DevOps,
+        Architecture,
+        Leadership technique,
+        Administration système,
+        Administration réseau,
+        Bases de données relationnelles,
+        Développement,
+        Sécurité,
+        Conteneurs,
+      ]
+    highlights:
+      - réduction du temps de déploiement des solutions de 1 semaine avec une infrastructure inefficace à 2 heures (sur des serveurs dédiés)
+      - réduction massive des coûts d'hébergement
+      - accélération du développement grâce à des nettoyages de code
+      - a dirigé et inspiré les développeurs
+      - a résolu des problèmes de performance grâce au dépannage en direct et aux optimisations, faisant face à des situations de crise
+  - name: Believe Digital (streaming musical et gestion des revenus, 50+ ingénieurs)
+    url: https://www.believe.com/
+    position: Ingénieur DevOps Senior et Administrateur Système
+    startDate: "2017-01"
+    endDate: "2019-04"
+    summary: >
+      En tant qu'ingénieur DevOps/sysadmin expérimenté dirigeant (du point de vue technologique) une équipe de 4 personnes, nous construisons ensemble une infrastructure plus moderne et meilleure pour la gestion et le traitement de données à l'échelle du pétaoctet. Nous relevons de nombreux défis techniques et de sécurité pour fournir le meilleur service, le plus fiable possible, à notre équipe de 50 développeurs et à leur nombre croissant de clients.
+    highlights:
+      - migration réussie de bases de données complexes touchant les flux de travail en temps réel
+      - optimisation des processus de construction
+      - migration réussie des environnements serveur des distributions Gentoo personnalisées vers des systèmes Debian standard
+    keywords:
+      [
+        DevOps,
+        Sécurité,
+        Stockage,
+        Administration système,
+        Linux,
+        Administration réseau,
+        Conteneurs,
+      ]
+  - name: NBS System (hébergement web PCI DSS, 20+ ingénieurs)
+    url: https://www.nbs-system.com/
+    position: Ingénieur R&D
+    summary: >
+      Je travaille dans l'équipe R&D de 3 personnes en tant que développeur backend python, résolvant des problèmes liés à la mise à l'échelle d'un système d'information, à la performance générale et à la fiabilité. J'effectue également des missions de conseil pour des clients ayant besoin d'une expertise particulière sur les bases de données relationnelles.
+    keywords:
+      [DevOps, Administration système, Linux, Bases de données relationnelles, Développement]
+    highlights:
+      - déblocage massif des accès lents au système d'information en construisant un middleware intelligent
+      - intégration de nouvelles plateformes de déploiement en plus de Xen et KVM (VMware vSphere)
+      - résolution des problèmes de performance sur de grands déploiements Magento pendant les soldes saisonnières
+    startDate: "2015-01"
+    endDate: "2017-01"
+  - name: Atasta SAS (conseil en informatique, 5 employés)
+    position: Ingénieur logiciel
+    summary: >
+      Je suis en charge des aspects infrastructure de cette petite entreprise, et je collabore également avec les autres employés pour des tâches de développement logiciel et de déploiement. J'évalue également les compétences et interviewe les candidats. Je participe à un certain nombre de réunions techniques, de sessions d'audit, de conseils avec les clients, et j'aide l'entreprise à définir sa direction technique générale.
+    startDate: "2012-01"
+    endDate: "2015-01"
+    keywords:
+      [
+        DevOps,
+        Administration système,
+        Développement,
+        Linux,
+        Bases de données relationnelles,
+        Audit,
+      ]
+  - name: Freelancer
+    position: Consultant technique
+    summary: >
+      Je fournis aux petites et moyennes entreprises des conseils sur leurs bases de données et leurs piles web, les aide dans les migrations de boutiques en ligne et les opérations informatiques générales, les revues d'architecture système et d'autres services.
+    keywords:
+      [
+        DevOps,
+        Administration système,
+        E-commerce,
+        Bases de données relationnelles,
+        Développement,
+        Sécurité,
+        Conteneurs,
+      ]
+    startDate: "2010-01"
+    endDate: "2019-01"
+  - name: Nerim SAS (hébergement web et fournisseur d'accès internet, 10+ ingénieurs)
+    summary: >
+      Je travaille en tant qu'administratrice système dans l'hébergement web et le support réseau, traitant des tickets et gérant les relations avec les clients.
+    startDate: "2009-01"
+    endDate: "2009-07"
+    position: Administrateur Système
+    keywords: [Gestion client, Administration système, Linux]
+
+education:
+  - studyType: Formation STEM
+    institution: "Auto-formation"
+    startDate: "9999"
+  - studyType: "Architecte de Solutions AWS – Associé"
+    startDate: "2016"
+  - studyType: "Administrateur de Base de Données PostgreSQL Avancé"
+    startDate: "2014"
+    institution: "Dalibo"
+  - studyType: DUT Informatique
+    startDate: "2008"
+    institution: "IUT de Lens, France"
+    courses:
+      - Développement logiciel
+      - Administration système
+      - Gestion de projet
+  - studyType: Baccalauréat scientifique
+    startDate: "2006"
+    institution: "Lycée Édouard Branly, Boulogne sur Mer, France"
+    courses:
+      - Mathématiques
+      - Physique
+      - Mécanique
+      - Électronique
+      - Philosophie
+
+languages:
+  - language: Français
+    fluency: Locuteur natif
+    years: 34
+  - language: Anglais
+    fluency: Bilingue
+    years: 24
+  - language: Allemand
+    fluency: Intermédiaire
+    years: 20
+
+projects:
+  - name: Conférencière à CodePub Berlin meets Sennder
+    location: Berlin, Allemagne
+    startDate: "2021-11-29"
+    endDate: "2021-11-29"
+    keywords:
+      - Féminisme
+      - Femmes dans la technologie
+      - DevOps
+      - Éducation
+      - STEM
+    type: Atelier
+    summary: >
+      J'ai introduit les concepts de DevOps et de développement Agile à un public féminin et non binaire généralement sous-représenté, montrant comment il s'agit en réalité de donner du pouvoir aux développeurs et aux personnes en général en se concentrant sur une livraison réalisable, des cycles de valeur plus rapides et sur la construction d'écosystèmes.
+
+references:
+  - name: Manu Ustenko, Manager chez sennder GmbH
+    reference: >
+      J'ai travaillé avec Macha en tant que collègue, puis en tant que manager pendant environ 2 ans. Je recommande vivement Macha en tant qu'experte avérée en développement logiciel. Elle est intelligente, précise et attentive aux détails. Elle est capable de prendre une tâche, de mener des recherches complètes, et enfin de la mettre en œuvre. D'un autre côté, il est facile de communiquer avec Matcha. Elle est capable d'expliquer des concepts difficiles avec un langage simple.
+    more: "https://www.linkedin.com/in/matcha-d/#:~:text=e)%20de%20Matcha-,I%20was%20working%20with%20Matcha%20as%20a%20peer,-and%20then%20as"
+  - name: Gheorghina Gligor, Ingénieur logiciel principal chez sennder GmbH
+    reference: >
+      [...] Macha est une personne exceptionnelle qui possède une combinaison unique de connaissances, de gentillesse, de patience et de capacité à articuler des idées techniques. Elle a une éthique de travail inégalée et est toujours prête à aller au-delà pour s'assurer que le travail est bien fait. C'est une joueuse d'équipe qui est toujours prête à aider ses collègues. Son attitude positive fait d'elle un excellent ajout à n'importe quelle équipe, et sa capacité à bien travailler sous pression est vraiment impressionnante. [...]
+    more: ./rec_gheorghina.pdf
+interests:
+  - name: Droits des personnes queer
+    summary: Je suis militante pour les droits et l'autonomie des personnes queer et handicapées.
+  - name: Littérature
+    summary: Je suis une passionnée de science-fiction, également une lectrice assidue de Pratchett, Gaiman, Iain M. Banks et d'autres auteurs renommés.
+  - name: Wikipedia
+    summary: Je suis contributrice sur Wikipédia depuis 2005.
+
+
+
+
