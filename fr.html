@@ -1,0 +1,1590 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Matcha Desoutter</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+blockquote {
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item.full-width {
+  width: 100%;
+}
+#skills .item .keywords {
+  width: 15em;
+}
+
+#skills .full-width .skill-data {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#skills .full-width .skills-details {
+  width: 50%;
+}
+
+#skills .full-width .keywords {
+  width: 100%;
+  text-align: center;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after,
+.level.basic .bar::after {
+  background: #3b38df;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fully.proficient .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.expert .bar::after,
+.level.bilingual .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+  margin-bottom: 1em;
+}
+
+#references .more-info {
+  font-size: 0.7em;
+  font-weight: normal;
+  font-style: italic;
+}
+.section > section > section {
+  margin-bottom: 1rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  #profiles a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 1em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  ul.keywords::before {
+    content: "Skills acquired: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Matcha Desoutter</h1>
+    			<h2 class="label">Ingénieur logiciel principal</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="city">Paris,</span>
+    			<span class="countryCode">FR</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    			<div class="email">
+    				<span class="far fa-envelope"></span>
+    				<a class="hide-href-print" href="mailto:ds.tt.rc@gmail.com">ds.tt.rc@gmail.com</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/matcha-d/">matcha-d</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-twitter twitter social"></span>
+    					<span>matcha_x</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/matchaxnb">matchaxnb</a>
+    					</span>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section">
+    		<section class="main-summary">
+    			<div><p><p>Je suis passionné par l'ingénierie, les ingénieurs, l'expérience des développeurs et la résolution de problèmes. J'ai commencé ma carrière dans l'ingénierie backend, j'ai progressé avec la R&amp;D, aidé plusieurs entreprises à passer à DevOps, et je suis maintenant fier de former des communautés d'ingénieurs axées sur la résolution de problèmes, les piles technologiques et l'amélioration de l'efficacité dans ce monde post-COVID où les espaces physiques sont plus difficiles à naviguer. Je suis obsédé par la définition précise de l'espace du problème et j'adore fournir la bonne solution au bon moment. J'aime aussi la programmation et la construction de conceptions logicielles élégantes.</p></p></div>
+    		</section>
+    	</section>
+    
+    <section class="section">
+    	<header>
+    		<h2 class="section-title">Skills</h2>
+    	</header>
+    	<section id="skills">
+        <div class="item full-width">
+            <h3 class="name">
+              Leadership en expérience de développement
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Formation de communautés de pratique
+                </h4>
+                <div class="level pleinement compétent">
+                    <em>pleinement compétent</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Intégration Backstage
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Inner source
+                </h4>
+                <div class="level pleinement compétent">
+                    <em>pleinement compétent</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>Intégration de Backstage à la pile de développement de sennder (2022-2023)</li>
+              <li>Animation de la Communauté de Pratique DevOps chez sennder (2021-2022)</li>
+              <li>Établissement de piles d&#x27;outils et de processus pour les contributions en source interne chez sennder (2022)</li>
+              <li>Unification de la pile de documentation chez sennder (2022)</li>
+              <li>Établissement d&#x27;un système de production de code chez Believe Digital (2018-2019)</li>
+              </ul>
+            </div>
+          </div>
+            <ul class="keywords">
+            	<li>Backstage</li>
+            	<li>Meetups</li>
+            	<li>Expérience du développeur</li>
+            	<li>Inner source</li>
+            	<li>Open source</li>
+            </ul>
+    
+    		</div>
+        <div class="item full-width">
+            <h3 class="name">
+              Leadership technologique
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Architecture logicielle
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Architecture des systèmes
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Rédaction de spécifications utilisateur
+                </h4>
+                <div class="level intermédiaire">
+                    <em>intermédiaire</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Établissement de normes
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Résolution de problèmes
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>Établissement de normes pour la publication de métadonnées de services et de métriques DORA4 chez sennder</li>
+              <li>Établissement de la norme des meilleures pratiques de documentation en tant que code chez sennder (2022)</li>
+              <li>Conception d&#x27;une solution de stockage et d&#x27;archivage pour surmonter les défis de coûts et de fiabilité d&#x27;accès aux actifs chez Believe Digital (2018-2019)</li>
+              <li>Conception et construction d&#x27;une solution de base de données pour accéder au système d&#x27;information depuis la pile de déploiement chez NBS System (2016)</li>
+              <li>Rédaction, édition et publication de la documentation complète pour les utilisateurs et les développeurs du portail développeur Backstage chez sennder (2022)</li>
+              <li>J&#x27;aide les gens à explorer pleinement l&#x27;espace du problème avant de s&#x27;engager dans l&#x27;espace de solution plus familier.</li>
+              <li>La résolution de problèmes est une question d&#x27;équipe : je l&#x27;incarne en guidant les gens sur la bonne voie au lieu de résoudre les problèmes à leur place. Cela aide l&#x27;organisation technologique à mûrir en favorisant l&#x27;autonomie.</li>
+              <li>Rédaction et contribution à une douzaine de documents RFC internes chez sennder pour la résolution de problèmes</li>
+              <li>Coprésident et membre à part entière du conseil d&#x27;administration Foundations Engineering de sennder dédié à la résolution des problèmes d&#x27;ingénierie de l&#x27;organisation.</li>
+              </ul>
+            </div>
+          </div>
+            <ul class="keywords">
+            	<li>Intelligence collective</li>
+            	<li>Dépannage</li>
+            	<li>Enquête</li>
+            	<li>Analyse des causes profondes</li>
+            	<li>Architecture</li>
+            </ul>
+    
+    		</div>
+        <div class="item full-width">
+            <h3 class="name">
+              Génie logiciel
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Développement en Python
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Construction de systèmes évolutifs et fiables
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Gestion des packages et des versions
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Pratiques DevOps
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Développement SQL
+                </h4>
+                <div class="level avancé">
+                    <em>avancé</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Développement en Golang
+                </h4>
+                <div class="level intermédiaire">
+                    <em>intermédiaire</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>Établissement des meilleures pratiques DevOps chez Believe Digital, bluenove, sennder</li>
+              <li>Construction de logiciels en utilisant Python dans toutes les positions depuis NBS System (2015-présent)</li>
+              <li>Reconnu en tant qu&#x27;expert interne en gestion des performances de base de données chez sennder</li>
+              <li>Audit de bases de données de collecte de données en temps réel pour SFR et d&#x27;autres clients (2012-2015)</li>
+              <li>Contributeur à des projets open source écrits en Golang (Hound, Vale.sh)</li>
+              </ul>
+            </div>
+          </div>
+            <ul class="keywords">
+            	<li>Python</li>
+            	<li>Golang</li>
+            	<li>Shell</li>
+            	<li>PostgreSQL</li>
+            	<li>MySQL</li>
+            	<li>Architecture</li>
+            </ul>
+    
+    		</div>
+        <div class="item full-width">
+            <h3 class="name">
+              Ingénierie de plateforme
+            </h3>
+          <div class="skill-data">
+          <div class="subskills">
+            
+            <div class="subskill">
+                <h4 class="name">
+                  Infrastructure en tant que code
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Opérations Kubernetes
+                </h4>
+                <div class="level intermédiaire">
+                    <em>intermédiaire</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="subskill">
+                <h4 class="name">
+                  Docker, Compose et Swarm
+                </h4>
+                <div class="level expert">
+                    <em>expert</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+            <div class="skills-details">
+              <ul>
+              <li>Transition du déploiement logiciel à partir de scripts shell exécutés manuellement vers des conteneurs Docker entièrement automatisés pour des applications complexes (bluenove, 2019-2021)</li>
+              <li>Migration d&#x27;applications d&#x27;ECS à EKS (sennder, 2021-2022)</li>
+              <li>Co-conception de graphiques de déploiement Helm pour des applications internes chez sennder (2022)</li>
+              <li>Réingénierie et refonte des modules internes Terraform chez sennder (2021-2023)</li>
+              <li>Transition des opérations du manuel à l&#x27;approvisionnement et à la configuration entièrement automatisés d&#x27;Ansible chez Believe Digital (2017-2019)</li>
+              </ul>
+            </div>
+          </div>
+            <ul class="keywords">
+            	<li>Ansible</li>
+            	<li>Terraform</li>
+            	<li>AWS</li>
+            	<li>DevOps</li>
+            	<li>Intégration continue</li>
+            	<li>Kubernetes</li>
+            </ul>
+    
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+          <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">May 2021</span>
+              <span class="endDate">- Mar 2023</span>
+            </div>
+            <div class="position">Ingénieur logiciel principal, Plateforme</div>
+            <div class="company">sennder GmbH (automatisation du fret routier, 250+ ingénieurs)</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://sennder.com">https://sennder.com</a>
+          </span>  
+          <ul class="keywords">
+            <li>DevOps</li>
+            <li>Architecture</li>
+            <li>Leadership technique</li>
+            <li>Expérience du développeur</li>
+            <li>Open source</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>En tant qu'Ingénieur logiciel principal dans le domaine de la Plateforme, je participe à la construction de la plateforme interne de sennder qui aide les développeurs à déployer de nombreux services alors que l'entreprise passe d'un modèle d'application monolithique à une architecture distribuée asynchrone. J'initie également l'initiative Developer Experience et oriente l'entreprise vers un partage de connaissances sans friction au sein d'une communauté d'ingénieurs de plus de 200 personnes. Quand je ne fais pas cela, j'interviewe un grand nombre d'ingénieurs afin que des personnes talentueuses se joignent à nous.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>développé des outils pour migrer l'infrastructure vers et depuis AWS ECS vers EKS et pour les migrations de bases de données RDS entre comptes</p></p></li>
+              <li><p><p>co-créé et dirigé la Communauté de Pratique DevOps et Infrastructure</p></p></li>
+              <li><p><p>initié l'initiative Developer Experience pour 200 ingénieurs, inspirant d'autres ingénieurs principaux à faire de même avec les outils QA et frontend</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-1"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Apr 2019</span>
+              <span class="endDate">- May 2021</span>
+            </div>
+            <div class="position">Ingénieur DevOps Senior</div>
+            <div class="company">bluenove (conseil et ingénierie en intelligence collective, 10 ingénieurs)</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://bluenove.com">https://bluenove.com</a>
+          </span>  
+          <ul class="keywords">
+            <li>DevOps</li>
+            <li>Architecture</li>
+            <li>Leadership technique</li>
+            <li>Administration système</li>
+            <li>Administration réseau</li>
+            <li>Bases de données relationnelles</li>
+            <li>Développement</li>
+            <li>Sécurité</li>
+            <li>Conteneurs</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>Du point de vue DevOps, je construis les outils qui déploient des piles de solutions open source d'intelligence collective et en tant que co-Tech Lead, j'aide les développeurs à étudier les problèmes techniques et à produire des solutions algorithmiques et architecturales élégantes et efficaces.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>réduction du temps de déploiement des solutions de 1 semaine avec une infrastructure inefficace à 2 heures (sur des serveurs dédiés)</p></p></li>
+              <li><p><p>réduction massive des coûts d'hébergement</p></p></li>
+              <li><p><p>accélération du développement grâce à des nettoyages de code</p></p></li>
+              <li><p><p>a dirigé et inspiré les développeurs</p></p></li>
+              <li><p><p>a résolu des problèmes de performance grâce au dépannage en direct et aux optimisations, faisant face à des situations de crise</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-2"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2017</span>
+              <span class="endDate">- Apr 2019</span>
+            </div>
+            <div class="position">Ingénieur DevOps Senior et Administrateur Système</div>
+            <div class="company">Believe Digital (streaming musical et gestion des revenus, 50+ ingénieurs)</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://www.believe.com/">https://www.believe.com/</a>
+          </span>  
+          <ul class="keywords">
+            <li>DevOps</li>
+            <li>Sécurité</li>
+            <li>Stockage</li>
+            <li>Administration système</li>
+            <li>Linux</li>
+            <li>Administration réseau</li>
+            <li>Conteneurs</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>En tant qu'ingénieur DevOps/sysadmin expérimenté dirigeant (du point de vue technologique) une équipe de 4 personnes, nous construisons ensemble une infrastructure plus moderne et meilleure pour la gestion et le traitement de données à l'échelle du pétaoctet. Nous relevons de nombreux défis techniques et de sécurité pour fournir le meilleur service, le plus fiable possible, à notre équipe de 50 développeurs et à leur nombre croissant de clients.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>migration réussie de bases de données complexes touchant les flux de travail en temps réel</p></p></li>
+              <li><p><p>optimisation des processus de construction</p></p></li>
+              <li><p><p>migration réussie des environnements serveur des distributions Gentoo personnalisées vers des systèmes Debian standard</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-3"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2015</span>
+              <span class="endDate">- Jan 2017</span>
+            </div>
+            <div class="position">Ingénieur R&amp;D</div>
+            <div class="company">NBS System (hébergement web PCI DSS, 20+ ingénieurs)</div>
+          </header>
+    
+          <span class="url">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="https://www.nbs-system.com/">https://www.nbs-system.com/</a>
+          </span>  
+          <ul class="keywords">
+            <li>DevOps</li>
+            <li>Administration système</li>
+            <li>Linux</li>
+            <li>Bases de données relationnelles</li>
+            <li>Développement</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>Je travaille dans l'équipe R&amp;D de 3 personnes en tant que développeur backend python, résolvant des problèmes liés à la mise à l'échelle d'un système d'information, à la performance générale et à la fiabilité. J'effectue également des missions de conseil pour des clients ayant besoin d'une expertise particulière sur les bases de données relationnelles.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>déblocage massif des accès lents au système d'information en construisant un middleware intelligent</p></p></li>
+              <li><p><p>intégration de nouvelles plateformes de déploiement en plus de Xen et KVM (VMware vSphere)</p></p></li>
+              <li><p><p>résolution des problèmes de performance sur de grands déploiements Magento pendant les soldes saisonnières</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-4"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2012</span>
+              <span class="endDate">- Jan 2015</span>
+            </div>
+            <div class="position">Ingénieur logiciel</div>
+            <div class="company">Atasta SAS (conseil en informatique, 5 employés)</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>DevOps</li>
+            <li>Administration système</li>
+            <li>Développement</li>
+            <li>Linux</li>
+            <li>Bases de données relationnelles</li>
+            <li>Audit</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>Je suis en charge des aspects infrastructure de cette petite entreprise, et je collabore également avec les autres employés pour des tâches de développement logiciel et de déploiement. J'évalue également les compétences et interviewe les candidats. Je participe à un certain nombre de réunions techniques, de sessions d'audit, de conseils avec les clients, et j'aide l'entreprise à définir sa direction technique générale.</p></p></div>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-5"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2010</span>
+              <span class="endDate">- Jan 2019</span>
+            </div>
+            <div class="position">Consultant technique</div>
+            <div class="company">Freelancer</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>DevOps</li>
+            <li>Administration système</li>
+            <li>E-commerce</li>
+            <li>Bases de données relationnelles</li>
+            <li>Développement</li>
+            <li>Sécurité</li>
+            <li>Conteneurs</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>Je fournis aux petites et moyennes entreprises des conseils sur leurs bases de données et leurs piles web, les aide dans les migrations de boutiques en ligne et les opérations informatiques générales, les revues d'architecture système et d'autres services.</p></p></div>
+          </div>
+        </section>
+        <section class="work-item">
+    
+          <label for="work-item-6"></label>
+    
+          <header class="clear">
+            <div class="date">
+              <span class="startDate">Jan 2009</span>
+              <span class="endDate">- Jul 2009</span>
+            </div>
+            <div class="position">Administrateur Système</div>
+            <div class="company">Nerim SAS (hébergement web et fournisseur d&#x27;accès internet, 10+ ingénieurs)</div>
+          </header>
+    
+     
+          <ul class="keywords">
+            <li>Gestion client</li>
+            <li>Administration système</li>
+            <li>Linux</li>
+          </ul>
+          <div class="item" id="work-item">
+            <div class="summary"><p><p>Je travaille en tant qu'administratrice système dans l'hébergement web et le support réseau, traitant des tickets et gérant les relations avec les clients.</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Projects <span class="item-count">(1)</span></h2>
+      </header>
+      <section id="projects">
+        <section class="project-item">
+            <label for="project-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Conférencière à CodePub Berlin meets Sennder</div>
+              <div class="date"><span class="rangeDate">29 Nov 2021</span></div>
+          </header>
+          <span class="location">
+          <span class="fas fa-map-marker-alt"></span>
+          </span>
+          <ul class="keywords">
+              <li>Féminisme</li>
+              <li>Femmes dans la technologie</li>
+              <li>DevOps</li>
+              <li>Éducation</li>
+              <li>STEM</li>
+          </ul>
+          <div class="item">
+              <div class="summary"><p><p>J'ai introduit les concepts de DevOps et de développement Agile à un public féminin et non binaire généralement sous-représenté, montrant comment il s'agit en réalité de donner du pouvoir aux développeurs et aux personnes en général en se concentrant sur une livraison réalisable, des cycles de valeur plus rapides et sur la construction d'écosystèmes.</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(5)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="rangeDate">Continuous</span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                Formation STEM
+              </div>
+              <div class="institution">
+                Auto-formation
+              </div>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="rangeDate">2016</span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                Architecte de Solutions AWS – Associé
+              </div>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="rangeDate">2014</span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                Administrateur de Base de Données PostgreSQL Avancé
+              </div>
+              <div class="institution">
+                Dalibo
+              </div>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="rangeDate">2008</span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                DUT Informatique
+              </div>
+              <div class="institution">
+                IUT de Lens, France
+              </div>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Développement logiciel</li>
+            <li>Administration système</li>
+            <li>Gestion de projet</li>
+          </ul>
+    
+          <div class="item">
+          </div>
+        </section>
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="rangeDate">2006</span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                Baccalauréat scientifique
+              </div>
+              <div class="institution">
+                Lycée Édouard Branly, Boulogne sur Mer, France
+              </div>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Mathématiques</li>
+            <li>Physique</li>
+            <li>Mécanique</li>
+            <li>Électronique</li>
+            <li>Philosophie</li>
+          </ul>
+    
+          <div class="item">
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            Français
+          </h3>
+          <div class="item">
+            <div class="level fluency locuteur natif">
+              <em>Locuteur natif</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Anglais
+          </h3>
+          <div class="item">
+            <div class="level fluency bilingue">
+              <em>Bilingue</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Allemand
+          </h3>
+          <div class="item">
+            <div class="level fluency intermédiaire">
+              <em>Intermédiaire</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Droits des personnes queer
+          </h3>
+            <div class="summary"><p><p>Je suis militante pour les droits et l'autonomie des personnes queer et handicapées.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Littérature
+          </h3>
+            <div class="summary"><p><p>Je suis une passionnée de science-fiction, également une lectrice assidue de Pratchett, Gaiman, Iain M. Banks et d'autres auteurs renommés.</p></p></div>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Wikipedia
+          </h3>
+            <div class="summary"><p><p>Je suis contributrice sur Wikipédia depuis 2005.</p></p></div>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>References</h2>
+      </header>
+      <section id="references">
+        <div class="item">
+          <blockquote class="reference">
+            &#8220;&#32;J&#x27;ai travaillé avec Macha en tant que collègue, puis en tant que manager pendant environ 2 ans. Je recommande vivement Macha en tant qu&#x27;experte avérée en développement logiciel. Elle est intelligente, précise et attentive aux détails. Elle est capable de prendre une tâche, de mener des recherches complètes, et enfin de la mettre en œuvre. D&#x27;un autre côté, il est facile de communiquer avec Matcha. Elle est capable d&#x27;expliquer des concepts difficiles avec un langage simple.
+    &#32;&#8221;
+          </blockquote>
+          <div class="name">
+            Manu Ustenko, Manager chez sennder GmbH
+            <a class="more-info" target="_blank" href="https://www.linkedin.com/in/matcha-d/#:~:text&#x3D;e)%20de%20Matcha-,I%20was%20working%20with%20Matcha%20as%20a%20peer,-and%20then%20as">(read more)</a>
+          </div>
+        </div>
+        <div class="item">
+          <blockquote class="reference">
+            &#8220;&#32;[...] Macha est une personne exceptionnelle qui possède une combinaison unique de connaissances, de gentillesse, de patience et de capacité à articuler des idées techniques. Elle a une éthique de travail inégalée et est toujours prête à aller au-delà pour s&#x27;assurer que le travail est bien fait. C&#x27;est une joueuse d&#x27;équipe qui est toujours prête à aider ses collègues. Son attitude positive fait d&#x27;elle un excellent ajout à n&#x27;importe quelle équipe, et sa capacité à bien travailler sous pression est vraiment impressionnante. [...]
+    &#32;&#8221;
+          </blockquote>
+          <div class="name">
+            Gheorghina Gligor, Ingénieur logiciel principal chez sennder GmbH
+            <a class="more-info" target="_blank" href="./rec_gheorghina.pdf">(read more)</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <a href="resume_extra.html">see more</a>
+  </body>
+</html>
