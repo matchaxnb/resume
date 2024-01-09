@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build:main": "npx resume-cli export -r resume.yaml -t stackoverflow-detailed -f html public/index.html",
-    "build:fr": "npx resume-cli export -r resume_fr.yaml -t stackoverflow-french -f html public/fr.html",
+    "build:fr": "npx resume-cli export -r resume_fr.yaml -t stackoverflow-detailed -f html public/fr.html",
     "build:detailed": "npx resume-cli export -r resume_complete.yaml -t stackoverflow-detailed -f html public/resume_complete.html",
     "build:extra": "npx resume-cli export -r resume_extra.yaml -t stackoverflow-detailed -f html public/resume_extra.html",
     "build": "npm run build:main && npm run build:detailed && npm run build:extra && npm run build:fr"
