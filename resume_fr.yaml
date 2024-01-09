@@ -11,7 +11,7 @@ basics:
   name: Matcha Desoutter
   label: Ingénieur logiciel principal
   summary: >
-    Je suis passionné par l'ingénierie, les ingénieurs, l'expérience des développeurs et la résolution de problèmes. J'ai commencé ma carrière dans l'ingénierie backend, j'ai progressé avec la R&D, aidé plusieurs entreprises à passer à DevOps, et je suis maintenant fier de former des communautés d'ingénieurs axées sur la résolution de problèmes, les piles technologiques et l'amélioration de l'efficacité dans ce monde post-COVID où les espaces physiques sont plus difficiles à naviguer. Je suis obsédé par la définition précise de l'espace du problème et j'adore fournir la bonne solution au bon moment. J'aime aussi la programmation et la construction de conceptions logicielles élégantes.
+    Je suis passionnée par l'ingénierie, les ingénieurs, l'Expérience Développeur (Developer Experience) et la résolution de problèmes. J'ai commencé ma carrière dans l'ingénierie backend, j'ai progressé avec la R&D, aidé plusieurs entreprises à passer à DevOps, et je suis maintenant fière de former des communautés d'ingénieurs axées sur la résolution de problèmes, l'excellence technologique, et l'amélioration de l'efficacité dans ce monde post-COVID où les espaces physiques se font plus rares. Ma cause: la définition précise des problématiques. J'apprécie spécialement fournir la bonne solution au bon moment. J'aime aussi la programmation et la construction de conceptions logicielles élégantes.
   email: ds.tt.rc@gmail.com
   # téléphone
   # téléphone: "+33659906332"
@@ -33,14 +33,14 @@ basics:
 # Une description des compétences et capacités formelles du candidat.
 
 skills:
-  - name: Leadership en expérience de développement
+  - name: Leadership en Developer Experience
     subskills:
       - name: Formation de communautés de pratique
-        level: pleinement compétent
+        level: fully proficient
       - name: Intégration Backstage
         level: expert
       - name: Inner source
-        level: pleinement compétent
+        level: fully proficient
     details:
       - Intégration de Backstage à la pile de développement de sennder (2022-2023)
       - Animation de la Communauté de Pratique DevOps chez sennder (2021-2022)
@@ -60,7 +60,7 @@ skills:
       - name: Architecture des systèmes
         level: expert
       - name: Rédaction de spécifications utilisateur
-        level: intermédiaire
+        level: intermediate
       - name: Établissement de normes
         level: expert
       - name: Résolution de problèmes
@@ -92,9 +92,9 @@ skills:
       - name: Pratiques DevOps
         level: expert
       - name: Développement SQL
-        level: avancé
+        level: advanced
       - name: Développement en Golang
-        level: intermédiaire
+        level: intermediate
     details:
       - Établissement des meilleures pratiques DevOps chez Believe Digital, bluenove, sennder
       - Construction de logiciels en utilisant Python dans toutes les positions depuis NBS System (2015-présent)
@@ -113,7 +113,7 @@ skills:
       - name: Infrastructure en tant que code
         level: expert
       - name: Opérations Kubernetes
-        level: intermédiaire
+        level: intermediate
       - name: Docker, Compose et Swarm
         level: expert
     details:
@@ -136,7 +136,7 @@ work:
     startDate: "2021-05"
     endDate: "2023-03"
     summary: >
-      En tant qu'Ingénieur logiciel principal dans le domaine de la Plateforme, je participe à la construction de la plateforme interne de sennder qui aide les développeurs à déployer de nombreux services alors que l'entreprise passe d'un modèle d'application monolithique à une architecture distribuée asynchrone. J'initie également l'initiative Developer Experience et oriente l'entreprise vers un partage de connaissances sans friction au sein d'une communauté d'ingénieurs de plus de 200 personnes. Quand je ne fais pas cela, j'interviewe un grand nombre d'ingénieurs afin que des personnes talentueuses se joignent à nous.
+      En tant qu'Ingénieure logicielle principale dans le domaine de la Plateforme, je participe à la construction de la plateforme interne de sennder qui aide les développeurs à déployer de nombreux services alors que l'entreprise passe d'un modèle d'application monolithique à une architecture distribuée asynchrone. J'initie également l'initiative Developer Experience et oriente l'entreprise vers un partage de connaissances sans friction au sein d'une communauté d'ingénieurs de plus de 200 personnes. Quand je ne fais pas cela, j'interviewe un grand nombre d'ingénieurs afin que des personnes talentueuses se joignent à nous.
     keywords:
       [
         DevOps,
@@ -275,13 +275,13 @@ education:
 
 languages:
   - language: Français
-    fluency: Locuteur natif
+    fluency: native speaker
     years: 34
   - language: Anglais
-    fluency: Bilingue
+    fluency: bilingual
     years: 24
   - language: Allemand
-    fluency: Intermédiaire
+    fluency: intermediate
     years: 20
 
 projects:
